@@ -1,0 +1,66 @@
+Task 0 命令记录
+来源：用户在本次学习对话中粘贴的实际输出。本文件为选段转录，不是再次执行命令生成的日志。
+
+[CLI]
+AGENTSEEK v0.1.6
+/home/lx/.local/bin/agentseek
+
+[Windows 创建模板]
+PS D:\deepagents-in-action> agentseek create deepagents/research --checkout main --no-input
+Created research_deepagent
+
+[迁移到 Ubuntu 后 agentseek info]
+Root: /home/lx/projects/research_deepagent
+Name: Research DeepAgent
+Template: deepagents/research
+Lifecycle: .agentseek/lifecycle.toml / version 2
+Dev: agentseek dev
+Langgraph: http://127.0.0.1:2024 (runtime: agentseek-api)
+Frontend: http://127.0.0.1:5174 (runtime: vite)
+Env file: .env (present)
+
+[agentseek task --list]
+sync                  Install Python dependencies with uv.
+frontend              Install frontend dependencies.
+course-check          Run model-free course graph and artifact checks.
+说明：本次执行了 sync 和 frontend。未提供 course-check 执行结果，不将“列出任务”写成“所有任务已运行”。
+
+[Ubuntu agentseek doctor：用户粘贴的检查结果]
+ok   lifecycle.toml: Lifecycle spec is present.
+ok   uv: uv is available.
+ok   node: node is available.
+ok   npm: npm is available.
+ok   pyproject.toml: pyproject.toml is present.
+ok   langgraph.json: langgraph.json is present.
+ok   frontend/package.json: frontend/package.json is present.
+ok   frontend/node_modules: frontend/node_modules is present.
+ok   .env: .env is present.
+ok   SEEKDB_EMBED: SEEKDB_EMBED is configured.
+ok   SEEKDB_EMBED_DIR: SEEKDB_EMBED_DIR is configured.
+ok   OCEANBASE_DB_NAME: OCEANBASE_DB_NAME is configured.
+ok   AGENTSEEK_MODEL_PROVIDER: AGENTSEEK_MODEL_PROVIDER is configured.
+ok   AGENTSEEK_MODEL: AGENTSEEK_MODEL or DEEPAGENTS_MODEL or BUB_MODEL is configured.
+ok   OPENAI_API_KEY: OPENAI_API_KEY or ANTHROPIC_API_KEY or GOOGLE_API_KEY or BUB_OPENAI_API_KEY is configured.
+ok   TAVILY_API_KEY: TAVILY_API_KEY is configured.
+ok   LANGCHAIN_OPENAI_STREAM_CHUNK_TIMEOUT_S: LANGCHAIN_OPENAI_STREAM_CHUNK_TIMEOUT_S is configured.
+ok   langgraph cwd: . is present.
+ok   frontend cwd: frontend is present.
+
+[已进行过的 agentseek doctor --live：连通检查选段]
+ok   langgraph: http://127.0.0.1:2024/health is reachable.
+ok   frontend: http://127.0.0.1:5174 is reachable.
+
+[最近的 LangSmith Trace 列表：用户粘贴的实际结果]
+项目：deepagents-course
+NAME: LangGraph
+TYPE: chain
+TRACE ID: 01a13089-ef5b-7e21-b5ca-29399e323225
+RUN ID: 01a13089-ef5b-7e21-b5ca-29399e323225
+DURATION: 200.36s
+STATUS: N/A
+TOKENS: N/A
+说明：N/A 是此列表未显示对应信息，不代表零 Token 或显式成功/失败。
+
+[offline 最小工具实验：用户粘贴的终端末行]
+template: passed (offline)
+原始 Notebook 和 report.json 另保存在 baseline/，可以进一步核对实际工具返回和机制断言。

@@ -1,0 +1,32 @@
+{
+  "evidence_kind": "inspection_of_saved_vscode_notebook",
+  "verified_on": "2026-10-13",
+  "mode": "offline",
+  "mechanism_verification": true,
+  "paid_model_execution": false,
+  "source_notebook": "/home/lx/projects/deepagents-course-materials/notebooks/_template/task0-minimal-tool.ipynb",
+  "sha256": "c461cdb1ea8a80d6141dc0eba518e1503367fe23cb0be74dffeb58d1c82f1e60",
+  "changed_cell_numbers": [
+    3
+  ],
+  "primary_variable": "TEXT",
+  "before": "hello course",
+  "after": "hello agent",
+  "code_cell_execution_counts": [
+    1,
+    2,
+    3,
+    4
+  ],
+  "checks": {
+    "only_TEXT_changed": true,
+    "linux_offline_output": true,
+    "tool_request_arguments_match": true,
+    "tool_result_matches": true,
+    "tool_call_id_matches": true,
+    "tool_status_success": true,
+    "final_assertions_passed": true,
+    "no_saved_error_outputs": true
+  },
+  "note": "Read-only inspection report, not a new execution. The archived notebook preserves original metadata; inherited course_run fields are not used as evidence of this modified run."
+}

@@ -1,0 +1,16 @@
+运行模式： offline （脚本模型）
+Python： 3.12.3 平台： Linux x86_64
+deepagents==0.7.22
+langchain==1.4.3
+langchain-core==1.6.6
+langgraph==1.2.13
+langchain-openai==1.6.7
+
+human  调用 echo，原样返回 hello agent
+ai  
+  请求工具: echo 参数: {'text': 'hello agent'} 调用 ID: template-echo
+tool echo echo: hello agent
+  对应调用 ID: template-echo 执行状态: success
+ai  工具调用流程结束；请检查实际 ToolMessage。
+
+已验证：调用请求 → Python 工具执行 → 工具结果 → 最终回复。

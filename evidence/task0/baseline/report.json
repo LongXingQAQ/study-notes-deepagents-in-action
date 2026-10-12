@@ -1,0 +1,18 @@
+{
+  "mode": "offline",
+  "source_commit": "f93fe0a8be843eae77efaf85448035ddc54ff7ea",
+  "python": "3.12.3",
+  "executed_at": "2026-10-12T15:04:53.951630+00:00",
+  "lock_hash": "fc9bd72fd8c232f10664accec825e1e7403cb7b42c3c5d87814e4924c089b26f",
+  "results": [
+    {
+      "id": "template",
+      "status": "passed",
+      "mode": "offline",
+      "source_hash": "2e3d9c28f8fe273f5847ad144642a50deeb135f03f3d9b0fd3e8b61c8daebab4",
+      "services": [],
+      "model_evidence": "scripted",
+      "model_configuration": null
+    }
+  ]
+}
