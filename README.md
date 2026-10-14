@@ -9,6 +9,7 @@
 | 任务 | 笔记 | 当前状态 |
 | --- | --- | --- |
 | Task 0：入群准备与第一次成功 | [学习总结](notes/task0.md) | 技术实操与单变量实验已核对，文章待本人审查和公开发布 |
+| Task 1：我的第一个工具 Agent | [学习笔记](notes/task1.md) | 自定义工具 live 调用与 LangSmith Trace 已保存，笔记待本人审查 |
 
 ## 实验产物与文中图片
 
@@ -18,6 +19,10 @@
 - `evidence/task0/trace-analysis.md`：已有 Trace 的分析记录，来源与核验范围在文件中说明。
 - `evidence/task0/trace-tree.txt`：本人查询已有运行得到的完整原始 Trace 树；正文展示结构摘要。
 - `evidence/task0-images/`：学习总结直接展示的 `info`、任务列表、`doctor`、研究结果、工具返回与断言通过截图。
+- `evidence/task1/run-record.md`：报告长度检查工具的 live 调用与 Trace 摘要，模型名称由本人确认。
+- `evidence/task1/tool-result.json`：从同一张截图整理出的工具结果数据，不是程序原始导出。
+- `evidence/task1/trace-tree.txt`：本人查询此次运行得到的 LangSmith CLI 树形输出。
+- `evidence/task1-images/`：工具定义、导入、注册、实际调用和 LangSmith Trace 的五张截图。
 
 这个仓库中的 Notebook 归档用于阅读执行证据。复现实验时，请在原课程仓库按其 Notebook 说明安装依赖，并选择课程内核；归档 Notebook 保留教学材料中的相对阅读链接，不应假定仅克隆这个学习仓库即可独立执行。
 
