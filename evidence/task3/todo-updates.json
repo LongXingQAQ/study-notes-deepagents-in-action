@@ -1,0 +1,402 @@
+[
+  {
+    "experiment": "normal",
+    "trace_id": "01a15917-47a3-7ba2-a16b-165e4be04050",
+    "run_id": "01a15917-530a-75d1-8a07-11105dd5854a",
+    "start_time": "2026-10-20T11:34:23.24203Z",
+    "requested_todos": [
+      {
+        "content": "读取练习资料 (read_source: task2-notes.md)",
+        "status": "in_progress"
+      },
+      {
+        "content": "整理学习安排、报告要求和检查要求",
+        "status": "pending"
+      },
+      {
+        "content": "保存报告 (save_report, slug=task3-plan)",
+        "status": "pending"
+      },
+      {
+        "content": "读回报告并核验三部分内容与来源",
+        "status": "pending"
+      }
+    ],
+    "applied_todos": [
+      {
+        "content": "读取练习资料 (read_source: task2-notes.md)",
+        "status": "in_progress"
+      },
+      {
+        "content": "整理学习安排、报告要求和检查要求",
+        "status": "pending"
+      },
+      {
+        "content": "保存报告 (save_report, slug=task3-plan)",
+        "status": "pending"
+      },
+      {
+        "content": "读回报告并核验三部分内容与来源",
+        "status": "pending"
+      }
+    ]
+  },
+  {
+    "experiment": "normal",
+    "trace_id": "01a15917-47a3-7ba2-a16b-165e4be04050",
+    "run_id": "01a15917-6058-7c12-bdf8-0abdc6e8bd23",
+    "start_time": "2026-10-20T11:34:26.648515Z",
+    "requested_todos": [
+      {
+        "content": "读取练习资料 (read_source: task2-notes.md)",
+        "status": "completed"
+      },
+      {
+        "content": "整理学习安排、报告要求和检查要求",
+        "status": "in_progress"
+      },
+      {
+        "content": "保存报告 (save_report, slug=task3-plan)",
+        "status": "pending"
+      },
+      {
+        "content": "读回报告并核验三部分内容与来源",
+        "status": "pending"
+      }
+    ],
+    "applied_todos": [
+      {
+        "content": "读取练习资料 (read_source: task2-notes.md)",
+        "status": "completed"
+      },
+      {
+        "content": "整理学习安排、报告要求和检查要求",
+        "status": "in_progress"
+      },
+      {
+        "content": "保存报告 (save_report, slug=task3-plan)",
+        "status": "pending"
+      },
+      {
+        "content": "读回报告并核验三部分内容与来源",
+        "status": "pending"
+      }
+    ]
+  },
+  {
+    "experiment": "normal",
+    "trace_id": "01a15917-47a3-7ba2-a16b-165e4be04050",
+    "run_id": "01a15917-7822-7513-9f08-af6d9940d2ec",
+    "start_time": "2026-10-20T11:34:32.738804Z",
+    "requested_todos": [
+      {
+        "content": "读取练习资料 (read_source: task2-notes.md)",
+        "status": "completed"
+      },
+      {
+        "content": "整理学习安排、报告要求和检查要求",
+        "status": "completed"
+      },
+      {
+        "content": "保存报告 (save_report, slug=task3-plan)",
+        "status": "completed"
+      },
+      {
+        "content": "读回报告并核验三部分内容与来源",
+        "status": "in_progress"
+      }
+    ],
+    "applied_todos": [
+      {
+        "content": "读取练习资料 (read_source: task2-notes.md)",
+        "status": "completed"
+      },
+      {
+        "content": "整理学习安排、报告要求和检查要求",
+        "status": "completed"
+      },
+      {
+        "content": "保存报告 (save_report, slug=task3-plan)",
+        "status": "completed"
+      },
+      {
+        "content": "读回报告并核验三部分内容与来源",
+        "status": "in_progress"
+      }
+    ]
+  },
+  {
+    "experiment": "normal",
+    "trace_id": "01a15917-47a3-7ba2-a16b-165e4be04050",
+    "run_id": "01a15917-8966-7eb0-aef1-772ed65dce79",
+    "start_time": "2026-10-20T11:34:37.158742Z",
+    "requested_todos": [
+      {
+        "content": "读取练习资料 (read_source: task2-notes.md)",
+        "status": "completed"
+      },
+      {
+        "content": "整理学习安排、报告要求和检查要求",
+        "status": "completed"
+      },
+      {
+        "content": "保存报告 (save_report, slug=task3-plan)",
+        "status": "completed"
+      },
+      {
+        "content": "读回报告并核验三部分内容与来源",
+        "status": "completed"
+      }
+    ],
+    "applied_todos": [
+      {
+        "content": "读取练习资料 (read_source: task2-notes.md)",
+        "status": "completed"
+      },
+      {
+        "content": "整理学习安排、报告要求和检查要求",
+        "status": "completed"
+      },
+      {
+        "content": "保存报告 (save_report, slug=task3-plan)",
+        "status": "completed"
+      },
+      {
+        "content": "读回报告并核验三部分内容与来源",
+        "status": "completed"
+      }
+    ]
+  },
+  {
+    "experiment": "missing",
+    "trace_id": "01a15943-b13d-7112-b90e-84af16c958ed",
+    "run_id": "01a15943-c6ec-7290-92c9-92e6621e1fa1",
+    "start_time": "2026-10-20T12:22:56.492302Z",
+    "requested_todos": [
+      {
+        "content": "定位 sources 目录并列出可用资料",
+        "status": "in_progress"
+      },
+      {
+        "content": "读取 sources/task2-notes.md（学习要求）",
+        "status": "pending"
+      },
+      {
+        "content": "读取 sources/task3-time-budget.md（可用时间）",
+        "status": "pending"
+      },
+      {
+        "content": "基于两份资料制定学习安排报告",
+        "status": "pending"
+      },
+      {
+        "content": "用 save_report 保存，slug=task3-missing",
+        "status": "pending"
+      },
+      {
+        "content": "用 read_report 读回并核验",
+        "status": "pending"
+      }
+    ],
+    "applied_todos": [
+      {
+        "content": "定位 sources 目录并列出可用资料",
+        "status": "in_progress"
+      },
+      {
+        "content": "读取 sources/task2-notes.md（学习要求）",
+        "status": "pending"
+      },
+      {
+        "content": "读取 sources/task3-time-budget.md（可用时间）",
+        "status": "pending"
+      },
+      {
+        "content": "基于两份资料制定学习安排报告",
+        "status": "pending"
+      },
+      {
+        "content": "用 save_report 保存，slug=task3-missing",
+        "status": "pending"
+      },
+      {
+        "content": "用 read_report 读回并核验",
+        "status": "pending"
+      }
+    ]
+  },
+  {
+    "experiment": "missing",
+    "trace_id": "01a15943-b13d-7112-b90e-84af16c958ed",
+    "run_id": "01a15944-97a1-7103-97c8-55f1ec64f396",
+    "start_time": "2026-10-20T12:23:49.921726Z",
+    "requested_todos": [
+      {
+        "content": "定位 sources 目录并列出可用资料",
+        "status": "completed"
+      },
+      {
+        "content": "读取 sources/task2-notes.md（学习要求）",
+        "status": "completed"
+      },
+      {
+        "content": "【受阻】读取 sources/task3-time-budget.md：文件不存在，缺少可用时间数据",
+        "status": "pending"
+      },
+      {
+        "content": "【受阻】基于两份资料制定学习安排报告：因缺少时间预算，无法生成",
+        "status": "pending"
+      },
+      {
+        "content": "保存资料缺失说明报告（save_report, slug=task3-missing）",
+        "status": "in_progress"
+      },
+      {
+        "content": "读回说明报告并核验缺失声明与来源",
+        "status": "pending"
+      }
+    ],
+    "applied_todos": [
+      {
+        "content": "定位 sources 目录并列出可用资料",
+        "status": "completed"
+      },
+      {
+        "content": "读取 sources/task2-notes.md（学习要求）",
+        "status": "completed"
+      },
+      {
+        "content": "【受阻】读取 sources/task3-time-budget.md：文件不存在，缺少可用时间数据",
+        "status": "pending"
+      },
+      {
+        "content": "【受阻】基于两份资料制定学习安排报告：因缺少时间预算，无法生成",
+        "status": "pending"
+      },
+      {
+        "content": "保存资料缺失说明报告（save_report, slug=task3-missing）",
+        "status": "in_progress"
+      },
+      {
+        "content": "读回说明报告并核验缺失声明与来源",
+        "status": "pending"
+      }
+    ]
+  },
+  {
+    "experiment": "missing",
+    "trace_id": "01a15943-b13d-7112-b90e-84af16c958ed",
+    "run_id": "01a15944-d83a-77b3-bff7-88908bc30cd1",
+    "start_time": "2026-10-20T12:24:06.458213Z",
+    "requested_todos": [
+      {
+        "content": "定位 sources 目录并列出可用资料",
+        "status": "completed"
+      },
+      {
+        "content": "读取 sources/task2-notes.md（学习要求）",
+        "status": "completed"
+      },
+      {
+        "content": "【受阻】读取 sources/task3-time-budget.md：文件不存在，缺少可用时间数据",
+        "status": "pending"
+      },
+      {
+        "content": "【受阻】基于两份资料制定学习安排报告：因缺少时间预算，无法生成",
+        "status": "pending"
+      },
+      {
+        "content": "保存资料缺失说明报告（save_report, slug=task3-missing）",
+        "status": "completed"
+      },
+      {
+        "content": "读回说明报告并核验缺失声明与来源",
+        "status": "in_progress"
+      }
+    ],
+    "applied_todos": [
+      {
+        "content": "定位 sources 目录并列出可用资料",
+        "status": "completed"
+      },
+      {
+        "content": "读取 sources/task2-notes.md（学习要求）",
+        "status": "completed"
+      },
+      {
+        "content": "【受阻】读取 sources/task3-time-budget.md：文件不存在，缺少可用时间数据",
+        "status": "pending"
+      },
+      {
+        "content": "【受阻】基于两份资料制定学习安排报告：因缺少时间预算，无法生成",
+        "status": "pending"
+      },
+      {
+        "content": "保存资料缺失说明报告（save_report, slug=task3-missing）",
+        "status": "completed"
+      },
+      {
+        "content": "读回说明报告并核验缺失声明与来源",
+        "status": "in_progress"
+      }
+    ]
+  },
+  {
+    "experiment": "missing",
+    "trace_id": "01a15943-b13d-7112-b90e-84af16c958ed",
+    "run_id": "01a15944-fc6b-7b13-9a1c-36ebc8a244f9",
+    "start_time": "2026-10-20T12:24:15.723939Z",
+    "requested_todos": [
+      {
+        "content": "定位 sources 目录并列出可用资料",
+        "status": "completed"
+      },
+      {
+        "content": "读取 sources/task2-notes.md（学习要求）",
+        "status": "completed"
+      },
+      {
+        "content": "【受阻】读取 sources/task3-time-budget.md：文件不存在，缺少可用时间数据",
+        "status": "pending"
+      },
+      {
+        "content": "【受阻】基于两份资料制定学习安排报告：因缺少时间预算，无法生成",
+        "status": "pending"
+      },
+      {
+        "content": "保存资料缺失说明报告（save_report, slug=task3-missing）",
+        "status": "completed"
+      },
+      {
+        "content": "读回说明报告并核验缺失声明与来源",
+        "status": "completed"
+      }
+    ],
+    "applied_todos": [
+      {
+        "content": "定位 sources 目录并列出可用资料",
+        "status": "completed"
+      },
+      {
+        "content": "读取 sources/task2-notes.md（学习要求）",
+        "status": "completed"
+      },
+      {
+        "content": "【受阻】读取 sources/task3-time-budget.md：文件不存在，缺少可用时间数据",
+        "status": "pending"
+      },
+      {
+        "content": "【受阻】基于两份资料制定学习安排报告：因缺少时间预算，无法生成",
+        "status": "pending"
+      },
+      {
+        "content": "保存资料缺失说明报告（save_report, slug=task3-missing）",
+        "status": "completed"
+      },
+      {
+        "content": "读回说明报告并核验缺失声明与来源",
+        "status": "completed"
+      }
+    ]
+  }
+]
