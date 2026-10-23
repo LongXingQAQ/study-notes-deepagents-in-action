@@ -12,6 +12,7 @@
 | Task 1：我的第一个工具 Agent | [学习笔记](notes/task1.md) | 自定义工具 live 调用与 LangSmith Trace 已保存，笔记待本人审查 |
 | Task 2：让成果留在文件里 | [学习笔记](notes/task2.md) | content-builder 保存、读回与修改实验已核对，文件和两轮 Trace 已保存，笔记待本人审查 |
 | Task 3：让项目按计划完成 | [学习笔记](notes/task3.md) | 正常规划与缺资料实验已归档；保存边界偏差如实记录，笔记待本人审查 |
+| Task 4：把一项工作交给子 Agent | [学习笔记](notes/task4.md) | Notebook 机制验证与本地报告审核委派已核对，代码、输出和 Trace 已归档，笔记待本人审查 |
 
 ## 实验产物与文中图片
 
@@ -31,6 +32,10 @@
 - `evidence/task2-images/`：练习资料、工具参数与返回结果、报告修改前后等十张截图；正文直接展示关键图片。
 - `evidence/task3/`：固定资料、正常报告、缺失说明、两轮原始 Trace 树及工具输入输出、八次 Todo 更新和运行记录。
 - `evidence/task3-images/`：四次正常清单更新、资料目录、缺失查找与最终回复等六张截图。
+- `evidence/task4/notebook/`：本人执行第 5 章 offline 实验生成的 Notebook、Markdown、HTML 与运行报告。
+- `evidence/task4/code/`：审核子 Agent 接入前后源码、差异补丁与无模型测试代码归档。
+- `evidence/task4/`：被审核报告、子 Agent 审核意见、原始 Trace 树、工具输入输出、运行记录和检查结果转录。
+- `evidence/task4-images/`：Notebook 通过和真实审核结果的两张截图；前端固定显示名称的问题在笔记中说明。
 
 这个仓库中的 Notebook 归档用于阅读执行证据。复现实验时，请在原课程仓库按其 Notebook 说明安装依赖，并选择课程内核；归档 Notebook 保留教学材料中的相对阅读链接，不应假定仅克隆这个学习仓库即可独立执行。
 

@@ -1,0 +1,53 @@
+--- agent-before.py
++++ agent-after.py
+@@ -222,6 +222,34 @@
+         tools += [publish_report]
+     backend = FilesystemBackend(root_dir=EXAMPLE_DIR, virtual_mode=True)
+     memory_sources = ["/AGENTS.md", "/memory/preferences.md"]
++
++    report_reviewer = {
++        "name": "report_reviewer",
++        "description": (
++            "审核已经保存的本地报告。"
++            "检查报告内容、资料来源和指定要求是否一致。"
++            "委派时必须提供报告 slug 和具体检查要求。"
++        ),
++        "system_prompt": (
++            "你是本地报告审核员。"
++            "收到报告 slug 后，必须先调用 read_report 读取实际报告，"
++            "不能仅根据任务描述推测报告内容。"
++            "根据主 Agent 提供的检查要求逐项审核，"
++            "每项说明是否符合，并引用报告中的简短文字作为依据。"
++            "如果读取失败或证据不足，明确说明无法确认。"
++            "最后给出通过或不通过的结论及问题列表。"
++            "只返回审核意见，不修改或保存文件，"
++            "不联网、不生成图片、不委派其他 Agent。"
++        ),
++        "model": chat_model,
++        "tools": [read_report],
++    }
++
++    configured_subagents = [report_reviewer]
++    if search:
++        configured_subagents.extend(
++            _load_subagents(EXAMPLE_DIR / "subagents.yaml")
++        )
+     return create_deep_agent(
+         model=chat_model,
+         middleware=[
+@@ -256,11 +284,14 @@
+             "Preserve the provenance of user-provided and researched material; "
+             "cite the sources actually used. "
+             "Only delegate to researcher when search is enabled. "
++            "For saved report reviews, delegate to report_reviewer "
++            "using task with subagent_type=report_reviewer. "
++            "Include the report slug and exact review criteria in the task. "
+             "Generate an image only when images are enabled AND the user requests it. "
+             "Save preferences only when the user explicitly asks to remember them."
+         ),
+         tools=tools,
+-        subagents=_load_subagents(EXAMPLE_DIR / "subagents.yaml") if search else [],
++        subagents=configured_subagents,
+         backend=backend,
+         checkpointer=checkpointer,
+         interrupt_on={"publish_report": {"allowed_decisions": ["approve", "reject"]}} if approvals else None,

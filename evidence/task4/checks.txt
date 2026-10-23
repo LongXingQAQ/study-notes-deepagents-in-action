@@ -1,0 +1,27 @@
+Task4 无模型检查结果
+
+来源：本次对话中学习助手实际执行命令的输出节选转录。
+本文件不是终端自动导出的完整原始日志，归档时没有重新运行检查。
+
+新增测试：tests/test_course.py::test_text_mode_delegates_saved_report_review
+使用 ScriptedModel 安排主、子 Agent 响应，实际图、task、read_report 和文件操作均执行。
+
+接入审核员之前：
+FAILED test_text_mode_delegates_saved_report_review
+AssertionError: assert ['task', 'read_report'] == ['task']
+1 failed in 2.66s
+
+接入审核员之后，运行同一个测试：
+1 passed in 1.71s
+
+语法检查：
+python -m py_compile src/content_builder_deepagent/agent.py
+Python syntax check passed
+
+完整课程检查：
+agentseek task course-check
+15 passed in 16.86s
+
+验证范围：文本模式下可通过 task 调用 report_reviewer，由子 Agent 读取报告，
+主消息只收到 task 工具结果，读到的内容来自实际文件，原有课程检查保持通过。
+这些检查不验证真实模型是否能识别所有报告错误，真实模型证据另见本次 Trace。

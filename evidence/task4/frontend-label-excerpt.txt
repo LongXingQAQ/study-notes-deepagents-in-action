@@ -1,0 +1,17 @@
+Source: frontend/src/ToolCallCard.tsx
+Unmodified source excerpt
+
+34:     previousStatus.current = card.status;
+35:   }, [card.status]);
+36: 
+37:   const isImageTool = IMAGE_TOOL_NAMES.has(card.name);
+38:   const imagePath = isImageTool && card.result ? IMAGE_PATH_RE.exec(card.result)?.[1] ?? null : null;
+39: 
+40:   const label =
+41:     card.name === "task"
+42:       ? "Sub-agent: researcher"
+43:       : isImageTool
+44:         ? `Image: ${card.name}`
+45:         : `Tool: ${card.name}`;
+46:   const badge = card.status === "pending" ? "running…" : "done";
+47: 
