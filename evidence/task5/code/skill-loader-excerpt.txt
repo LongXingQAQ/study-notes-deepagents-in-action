@@ -1,0 +1,3 @@
+Source: src/content_builder_deepagent/agent.py; excerpt only, not a standalone program.
+223:     backend = FilesystemBackend(root_dir=EXAMPLE_DIR, virtual_mode=True)
+271:         skills=["/skills/"],
