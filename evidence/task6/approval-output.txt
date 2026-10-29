@@ -1,0 +1,48 @@
+来源：用户在本次对话中粘贴的两次 Ubuntu 终端输出，按原文转录。
+这不是归档时重新运行脚本得到的日志；未重新调用模型。
+
+$ uv run --frozen python -m content_builder_deepagent.approval_demo --decision approve
+{
+  "action_requests": [
+    {
+      "name": "publish_report",
+      "args": {
+        "slug": "approval-demo"
+      },
+      "description": "Tool execution requires approval\n\nTool: publish_report\nArgs: {'slug': 'approval-demo'}"
+    }
+  ],
+  "review_configs": [
+    {
+      "action_name": "publish_report",
+      "allowed_decisions": [
+        "approve",
+        "reject"
+      ]
+    }
+  ]
+}
+approve: records before=0, after=1; checked /home/lx/projects/content_builder_deepagent/reports/publications.jsonl
+
+$ uv run --frozen python -m content_builder_deepagent.approval_demo --decision reject
+{
+  "action_requests": [
+    {
+      "name": "publish_report",
+      "args": {
+        "slug": "approval-demo"
+      },
+      "description": "Tool execution requires approval\n\nTool: publish_report\nArgs: {'slug': 'approval-demo'}"
+    }
+  ],
+  "review_configs": [
+    {
+      "action_name": "publish_report",
+      "allowed_decisions": [
+        "approve",
+        "reject"
+      ]
+    }
+  ]
+}
+reject: records before=1, after=1; checked /home/lx/projects/content_builder_deepagent/reports/publications.jsonl

@@ -1,0 +1,72 @@
+[
+  {
+    "costs": null,
+    "custom_metadata": {
+      "LANGCHAIN_OPENAI_STREAM_CHUNK_TIMEOUT_S": "300",
+      "LANGSMITH_ENDPOINT": "https://api.smith.langchain.com",
+      "LANGSMITH_PROJECT": "deepagents-course",
+      "LANGSMITH_TRACING": "true",
+      "checkpoint_ns": "tools:afcf5ec7-214f-f44e-8e47-79031f012c13",
+      "langgraph_checkpoint_ns": "tools:afcf5ec7-214f-f44e-8e47-79031f012c13",
+      "langgraph_node": "tools",
+      "langgraph_path": [
+        "__pregel_push",
+        0,
+        false
+      ],
+      "langgraph_step": 7,
+      "langgraph_triggers": [
+        "__pregel_push"
+      ],
+      "lc_agent_name": null,
+      "lc_versions": {
+        "deepagents": "0.7.8"
+      },
+      "ls_integration": "deepagents",
+      "ls_method": "traceable",
+      "ls_run_depth": 4,
+      "thread_id": "19035cb4-de38-4439-ab0e-367cdb3b17c2"
+    },
+    "duration_ms": 1,
+    "end_time": "2026-10-29T15:40:57.624292Z",
+    "error": null,
+    "events": [
+      {
+        "kwargs": null,
+        "name": "start",
+        "time": "2026-10-29T15:40:57.62244Z"
+      },
+      {
+        "kwargs": null,
+        "name": "end",
+        "time": "2026-10-29T15:40:57.624292Z"
+      }
+    ],
+    "first_token_time": null,
+    "inputs": {
+      "slug": "approval-demo"
+    },
+    "name": "publish_report",
+    "outputs": {
+      "output": {
+        "additional_kwargs": {},
+        "content": "Recorded local test publication for blogs/approval-demo/post.md",
+        "name": "publish_report",
+        "response_metadata": {},
+        "status": "success",
+        "tool_call_id": "call_4cbf27d84df744b4b67861f8",
+        "type": "tool"
+      }
+    },
+    "parent_run_id": "01a18852-4d96-73f3-8264-550c03c36faa",
+    "run_id": "01a18852-4d96-7562-9fe9-45b913ebc463",
+    "run_type": "tool",
+    "start_time": "2026-10-29T15:40:57.62244Z",
+    "status": "",
+    "tags": [
+      "seq:step:1"
+    ],
+    "token_usage": null,
+    "trace_id": "01a18852-4d90-7a02-a833-fc602ee29e68"
+  }
+]

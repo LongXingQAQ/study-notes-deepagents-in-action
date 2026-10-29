@@ -1,0 +1,87 @@
+{
+  "source": "Derived from existing CLI exports and current project files; not a raw tool response.",
+  "runs": [
+    {
+      "label": "memory-before",
+      "trace_id": "01a18845-c598-7a72-9979-93660910ea2f",
+      "start_time": "2026-10-29T15:27:16.408284Z",
+      "duration_ms": 2328,
+      "thread_id": "e4fcad40-f553-4c14-b51a-7abf74d49fe5",
+      "root_error_present": true,
+      "tool_names": [
+        "save_preference"
+      ]
+    },
+    {
+      "label": "memory-save",
+      "trace_id": "01a18848-db27-7903-9a56-e327d3563196",
+      "start_time": "2026-10-29T15:30:38.50426Z",
+      "duration_ms": 5299,
+      "thread_id": "e4fcad40-f553-4c14-b51a-7abf74d49fe5",
+      "root_error_present": false,
+      "tool_names": [
+        "save_preference"
+      ]
+    },
+    {
+      "label": "memory-read",
+      "trace_id": "01a1884c-fc6f-7321-8fe1-fb2a2a566aee",
+      "start_time": "2026-10-29T15:35:09.167932Z",
+      "duration_ms": 20506,
+      "thread_id": "12d67ff5-7edb-40d6-bd99-0927c3cc4e1c",
+      "root_error_present": false,
+      "tool_names": [
+        "read_file",
+        "ls"
+      ]
+    },
+    {
+      "label": "approve-pause",
+      "trace_id": "01a18852-4768-73e2-a918-dc45e949dc90",
+      "start_time": "2026-10-29T15:40:56.040444Z",
+      "duration_ms": 1575,
+      "thread_id": "19035cb4-de38-4439-ab0e-367cdb3b17c2",
+      "root_error_present": false,
+      "tool_names": []
+    },
+    {
+      "label": "approve-resume",
+      "trace_id": "01a18852-4d90-7a02-a833-fc602ee29e68",
+      "start_time": "2026-10-29T15:40:57.616872Z",
+      "duration_ms": 3213,
+      "thread_id": "19035cb4-de38-4439-ab0e-367cdb3b17c2",
+      "root_error_present": false,
+      "tool_names": [
+        "publish_report"
+      ]
+    },
+    {
+      "label": "reject-pause",
+      "trace_id": "01a18854-19e0-71a0-9876-6d6dbbd4ad1c",
+      "start_time": "2026-10-29T15:42:55.456533Z",
+      "duration_ms": 1402,
+      "thread_id": "1a18a17a-7ce6-407a-9bff-1a79fa34cca2",
+      "root_error_present": false,
+      "tool_names": []
+    },
+    {
+      "label": "reject-resume",
+      "trace_id": "01a18854-1f5c-7842-8d58-b1f843c514ed",
+      "start_time": "2026-10-29T15:42:56.860211Z",
+      "duration_ms": 4937,
+      "thread_id": "1a18a17a-7ce6-407a-9bff-1a79fa34cca2",
+      "root_error_present": false,
+      "tool_names": []
+    }
+  ],
+  "checks": {
+    "saved_format_in_first_model_request": true,
+    "original_save_instruction_absent_in_first_request": true,
+    "memory_reader_uses_different_thread": true,
+    "approve_pause_and_resume_same_thread": true,
+    "reject_pause_and_resume_same_thread": true,
+    "publication_log_current_count": 1,
+    "paid_model_calls_during_archival": 0
+  },
+  "model": "qwen3.8-flash"
+}

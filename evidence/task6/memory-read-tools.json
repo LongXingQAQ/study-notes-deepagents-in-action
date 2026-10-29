@@ -1,0 +1,147 @@
+[
+  {
+    "costs": null,
+    "custom_metadata": {
+      "LANGCHAIN_OPENAI_STREAM_CHUNK_TIMEOUT_S": "300",
+      "LANGSMITH_ENDPOINT": "https://api.smith.langchain.com",
+      "LANGSMITH_PROJECT": "deepagents-course",
+      "LANGSMITH_TRACING": "true",
+      "assistant_id": "content_builder",
+      "checkpoint_ns": "e57f4d94-d77e-44d0-8b78-b65d9c08d63f",
+      "graph_id": "content_builder",
+      "langgraph_checkpoint_ns": "tools:c3b93c06-5d57-e516-7063-b0383b35a766",
+      "langgraph_node": "tools",
+      "langgraph_path": [
+        "__pregel_push",
+        0,
+        false
+      ],
+      "langgraph_step": 9,
+      "langgraph_triggers": [
+        "__pregel_push"
+      ],
+      "lc_agent_name": null,
+      "lc_versions": {
+        "deepagents": "0.7.8"
+      },
+      "ls_integration": "deepagents",
+      "ls_method": "traceable",
+      "ls_run_depth": 3,
+      "thread_id": "12d67ff5-7edb-40d6-bd99-0927c3cc4e1c"
+    },
+    "duration_ms": 2,
+    "end_time": "2026-10-29T15:35:19.073062Z",
+    "error": null,
+    "events": [
+      {
+        "kwargs": null,
+        "name": "start",
+        "time": "2026-10-29T15:35:19.070154Z"
+      },
+      {
+        "kwargs": null,
+        "name": "end",
+        "time": "2026-10-29T15:35:19.073062Z"
+      }
+    ],
+    "first_token_time": null,
+    "inputs": {
+      "file_path": "/skills/blog-post/SKILL.md",
+      "limit": 60
+    },
+    "name": "read_file",
+    "outputs": {
+      "output": {
+        "additional_kwargs": {},
+        "content": " 1  ---\n 2  name: blog-post\n 3  description: Writes and structures long-form blog posts, creates tutorial outlines, and optimizes content for SEO with optional cover images. Use when the user asks to write a blog post, article, how-to guide, tutorial, technical writeup, thought leadership piece, or long-form content.\n 4  ---\n 5  \n 6  # Blog Post Writing Skill\n 7  \n 8  ## Mode and sources\n 9  \n10  Read the runtime system prompt for content mode and enabled capabilities.\n11  The default is **pure text**. Read at least three local notes from sources/\n12  with read_source (planning.md, files.md, memory.md, approval.md). Use the\n13  provided sources rather than fabricating web citations. Do not invoke\n14  researcher, web_search or image tools in text mode.\n15  \n16  In full mode, delegate research with task(subagent_type=\"researcher\") only\n17  when search is enabled. Specify both the topic and a /research/\u003cslug\u003e.md\n18  output path, then read the findings. Without search, use local material or\n19  material supplied by the user.\n20  \n21  ## Output and completion\n22  \n23  Save text to `blogs/\u003cslug\u003e/post.md`. For a course report/blog, use\n24  save_report(slug, content), then read_report(slug); built-in write_file and\n25  read_file can be used for other content paths. Include a title, context,\n26  findings, practical application and a Sources section with the local\n27  filenames or enabled research URLs used. Use write_todos for the steps and\n28  mark completed only after checking the saved text. Plan actual work steps;\n29  do not add a task just to update the plan. Make the final write_todos update\n30  in a later response than read_report, and mark all successful steps completed\n31  before answering. If a tool fails, fix it before completing that step. Label\n32  material drawn from the bundled course notes as synthetic and keep those\n33  claims grounded in the notes. Preserve the provenance of user-provided and\n34  researched material, citing the sources actually used.\n35  \n36  A text deliverable is complete without an image. Generate a companion image\n37  only if images are enabled AND the user asks for one. Never retry an absent\n38  image or search tool. Mention optional visuals only if requested.\n39  \n40  ## Blog Post Structure\n41  \n42  Every blog post should follow this structure:\n43  \n44  ### 1. Hook (Opening)\n45  - Start with a compelling question, statistic, or statement\n46  - Make the reader want to continue\n47  - Keep it to 2-3 sentences\n48  \n49  ### 2. Context (The Problem)\n50  - Explain why this topic matters\n51  - Describe the problem or opportunity\n52  - Connect to the reader's experience\n53  \n54  ### 3. Main Content (The Solution)\n55  - Break into 3-5 main sections with H2 headers\n56  - Each section covers one key point\n57  - Include code examples, diagrams, or screenshots where helpful\n58  - Use bullet points for lists\n59  \n60  ### 4. Practical Application\n\n[Read 60 lines (lines 1-60 of 118 total). 58 lines remaining from offset 60.]",
+        "name": "read_file",
+        "response_metadata": {},
+        "status": "success",
+        "tool_call_id": "call_51bc7dcf6a004b8ba91c75e0",
+        "type": "tool"
+      }
+    },
+    "parent_run_id": "01a1884d-231c-7522-89c6-fea091c94455",
+    "run_id": "01a1884d-231e-7801-872c-d3aabce4b585",
+    "run_type": "tool",
+    "start_time": "2026-10-29T15:35:19.070154Z",
+    "status": "",
+    "tags": [
+      "seq:step:1"
+    ],
+    "token_usage": null,
+    "trace_id": "01a1884c-fc6f-7321-8fe1-fb2a2a566aee"
+  },
+  {
+    "costs": null,
+    "custom_metadata": {
+      "LANGCHAIN_OPENAI_STREAM_CHUNK_TIMEOUT_S": "300",
+      "LANGSMITH_ENDPOINT": "https://api.smith.langchain.com",
+      "LANGSMITH_PROJECT": "deepagents-course",
+      "LANGSMITH_TRACING": "true",
+      "assistant_id": "content_builder",
+      "checkpoint_ns": "e57f4d94-d77e-44d0-8b78-b65d9c08d63f",
+      "graph_id": "content_builder",
+      "langgraph_checkpoint_ns": "tools:ee454f2f-c579-4fff-10a0-6f7909a88c83",
+      "langgraph_node": "tools",
+      "langgraph_path": [
+        "__pregel_push",
+        0,
+        false
+      ],
+      "langgraph_step": 6,
+      "langgraph_triggers": [
+        "__pregel_push"
+      ],
+      "lc_agent_name": null,
+      "lc_versions": {
+        "deepagents": "0.7.8"
+      },
+      "ls_integration": "deepagents",
+      "ls_method": "traceable",
+      "ls_run_depth": 3,
+      "thread_id": "12d67ff5-7edb-40d6-bd99-0927c3cc4e1c"
+    },
+    "duration_ms": 2,
+    "end_time": "2026-10-29T15:35:14.89224Z",
+    "error": null,
+    "events": [
+      {
+        "kwargs": null,
+        "name": "start",
+        "time": "2026-10-29T15:35:14.890069Z"
+      },
+      {
+        "kwargs": null,
+        "name": "end",
+        "time": "2026-10-29T15:35:14.89224Z"
+      }
+    ],
+    "first_token_time": null,
+    "inputs": {
+      "path": "/skills/"
+    },
+    "name": "ls",
+    "outputs": {
+      "output": {
+        "additional_kwargs": {},
+        "content": "['/skills/blog-post/', '/skills/local-report/', '/skills/social-media/']",
+        "name": "ls",
+        "response_metadata": {},
+        "status": "success",
+        "tool_call_id": "call_49f0a458b14a479f92d2bb50",
+        "type": "tool"
+      }
+    },
+    "parent_run_id": "01a1884d-12c8-7b03-a34d-c9d4cde6cf0a",
+    "run_id": "01a1884d-12ca-76e3-89b9-e43b4a417c40",
+    "run_type": "tool",
+    "start_time": "2026-10-29T15:35:14.890069Z",
+    "status": "",
+    "tags": [
+      "seq:step:1"
+    ],
+    "token_usage": null,
+    "trace_id": "01a1884c-fc6f-7321-8fe1-fb2a2a566aee"
+  }
+]

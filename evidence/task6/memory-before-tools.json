@@ -1,0 +1,65 @@
+[
+  {
+    "costs": null,
+    "custom_metadata": {
+      "LANGCHAIN_OPENAI_STREAM_CHUNK_TIMEOUT_S": "300",
+      "LANGSMITH_ENDPOINT": "https://api.smith.langchain.com",
+      "LANGSMITH_PROJECT": "deepagents-course",
+      "LANGSMITH_TRACING": "true",
+      "assistant_id": "content_builder",
+      "checkpoint_ns": "8539a71d-39dc-46c7-887b-65692441d7dd",
+      "graph_id": "content_builder",
+      "langgraph_checkpoint_ns": "tools:07b8a661-19bf-efec-973b-1ea1b18cc1aa",
+      "langgraph_node": "tools",
+      "langgraph_path": [
+        "__pregel_push",
+        0,
+        false
+      ],
+      "langgraph_step": 6,
+      "langgraph_triggers": [
+        "__pregel_push"
+      ],
+      "lc_agent_name": null,
+      "lc_versions": {
+        "deepagents": "0.7.8"
+      },
+      "ls_integration": "deepagents",
+      "ls_method": "traceable",
+      "ls_run_depth": 3,
+      "thread_id": "e4fcad40-f553-4c14-b51a-7abf74d49fe5"
+    },
+    "duration_ms": 8,
+    "end_time": "2026-10-29T15:27:18.68445Z",
+    "error": "ValueError('Preference key must be language, tone, or format')Traceback (most recent call last):\n\n\n  File \"/home/lx/projects/content_builder_deepagent/.venv/lib/python3.12/site-packages/langchain_core/tools/base.py\", line 1098, in run\n    response = context.run(self._run, *tool_args, **tool_kwargs)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\n\n  File \"/home/lx/projects/content_builder_deepagent/.venv/lib/python3.12/site-packages/langchain_core/tools/structured.py\", line 152, in _run\n    return self.func(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^\n\n\n  File \"/home/lx/projects/content_builder_deepagent/src/content_builder_deepagent/lesson_tools.py\", line 63, in save_preference\n    raise ValueError(\"Preference key must be language, tone, or format\")\n\n\nValueError: Preference key must be language, tone, or format",
+    "events": [
+      {
+        "kwargs": null,
+        "name": "start",
+        "time": "2026-10-29T15:27:18.676199Z"
+      },
+      {
+        "kwargs": null,
+        "name": "error",
+        "time": "2026-10-29T15:27:18.68445Z"
+      }
+    ],
+    "first_token_time": null,
+    "inputs": {
+      "key": "answer_format",
+      "value": "先用一句话给出结论，再列出三条要点"
+    },
+    "name": "save_preference",
+    "outputs": null,
+    "parent_run_id": "01a18845-ce92-7623-9eae-cd52540abcaa",
+    "run_id": "01a18845-ce94-7333-9569-bf591404792d",
+    "run_type": "tool",
+    "start_time": "2026-10-29T15:27:18.676199Z",
+    "status": "",
+    "tags": [
+      "seq:step:1"
+    ],
+    "token_usage": null,
+    "trace_id": "01a18845-c598-7a72-9979-93660910ea2f"
+  }
+]

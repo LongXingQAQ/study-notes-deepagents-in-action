@@ -1,0 +1,112 @@
+{
+  "costs": null,
+  "custom_metadata": {
+    "LANGCHAIN_OPENAI_STREAM_CHUNK_TIMEOUT_S": "300",
+    "LANGSMITH_ENDPOINT": "https://api.smith.langchain.com",
+    "LANGSMITH_PROJECT": "deepagents-course",
+    "LANGSMITH_TRACING": "true",
+    "lc_agent_name": null,
+    "lc_versions": {
+      "deepagents": "0.7.8"
+    },
+    "ls_integration": "deepagents",
+    "ls_run_depth": 0,
+    "thread_id": "1a18a17a-7ce6-407a-9bff-1a79fa34cca2"
+  },
+  "duration_ms": 1402,
+  "end_time": "2026-10-29T15:42:56.859407Z",
+  "error": null,
+  "events": [
+    {
+      "kwargs": null,
+      "name": "start",
+      "time": "2026-10-29T15:42:55.456533Z"
+    }
+  ],
+  "first_token_time": null,
+  "inputs": {
+    "messages": [
+      {
+        "content": "Call publish_report(slug='approval-demo') exactly once. This is a local test. After it returns, stop; do not retry rejected publication or write the log yourself.",
+        "role": "user"
+      }
+    ]
+  },
+  "name": "LangGraph",
+  "outputs": {
+    "messages": [
+      {
+        "additional_kwargs": {},
+        "content": "Call publish_report(slug='approval-demo') exactly once. This is a local test. After it returns, stop; do not retry rejected publication or write the log yourself.",
+        "id": "fb0d1f12-683d-4042-bfc3-594fbcd36391",
+        "response_metadata": {},
+        "type": "human"
+      },
+      {
+        "additional_kwargs": {
+          "refusal": null
+        },
+        "content": "",
+        "id": "lc_run--01a18854-1a41-76c3-a427-05f70bedf3dc-0",
+        "invalid_tool_calls": [],
+        "response_metadata": {
+          "finish_reason": "tool_calls",
+          "id": "chatcmpl-fbf980a0-b4df-9ec0-959f-d4055c21133f",
+          "logprobs": null,
+          "model_name": "qwen3.8-flash",
+          "model_provider": "openai",
+          "system_fingerprint": null,
+          "token_usage": {
+            "completion_tokens": 59,
+            "completion_tokens_details": {
+              "accepted_prediction_tokens": null,
+              "audio_tokens": null,
+              "reasoning_tokens": 29,
+              "rejected_prediction_tokens": null,
+              "text_tokens": 59
+            },
+            "prompt_tokens": 6003,
+            "prompt_tokens_details": {
+              "audio_tokens": null,
+              "cache_write_tokens": null,
+              "cached_tokens": 5376,
+              "image_tokens": null,
+              "text_tokens": 6003
+            },
+            "total_tokens": 6062
+          }
+        },
+        "tool_calls": [
+          {
+            "args": {
+              "slug": "approval-demo"
+            },
+            "id": "call_eadb57b91e594add91b676ac",
+            "name": "publish_report",
+            "type": "tool_call"
+          }
+        ],
+        "type": "ai",
+        "usage_metadata": {
+          "input_token_details": {
+            "cache_read": 5376
+          },
+          "input_tokens": 6003,
+          "output_token_details": {
+            "reasoning": 29
+          },
+          "output_tokens": 59,
+          "total_tokens": 6062
+        }
+      }
+    ]
+  },
+  "parent_run_id": null,
+  "run_id": "01a18854-19e0-71a0-9876-6d6dbbd4ad1c",
+  "run_type": "chain",
+  "start_time": "2026-10-29T15:42:55.456533Z",
+  "status": "",
+  "tags": null,
+  "token_usage": null,
+  "trace_id": "01a18854-19e0-71a0-9876-6d6dbbd4ad1c"
+}

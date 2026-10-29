@@ -1,0 +1,181 @@
+{
+  "costs": null,
+  "custom_metadata": {
+    "LANGCHAIN_OPENAI_STREAM_CHUNK_TIMEOUT_S": "300",
+    "LANGSMITH_ENDPOINT": "https://api.smith.langchain.com",
+    "LANGSMITH_PROJECT": "deepagents-course",
+    "LANGSMITH_TRACING": "true",
+    "lc_agent_name": null,
+    "lc_versions": {
+      "deepagents": "0.7.8"
+    },
+    "ls_integration": "deepagents",
+    "ls_run_depth": 0,
+    "thread_id": "19035cb4-de38-4439-ab0e-367cdb3b17c2"
+  },
+  "duration_ms": 3213,
+  "end_time": "2026-10-29T15:41:00.830087Z",
+  "error": null,
+  "events": [
+    {
+      "kwargs": null,
+      "name": "start",
+      "time": "2026-10-29T15:40:57.616872Z"
+    },
+    {
+      "kwargs": null,
+      "name": "end",
+      "time": "2026-10-29T15:41:00.830087Z"
+    }
+  ],
+  "first_token_time": null,
+  "inputs": {
+    "input": {
+      "goto": [],
+      "graph": null,
+      "resume": {
+        "decisions": [
+          {
+            "type": "approve"
+          }
+        ]
+      },
+      "update": null
+    }
+  },
+  "name": "LangGraph",
+  "outputs": {
+    "messages": [
+      {
+        "additional_kwargs": {},
+        "content": "Call publish_report(slug='approval-demo') exactly once. This is a local test. After it returns, stop; do not retry rejected publication or write the log yourself.",
+        "id": "92e846cf-ad64-4272-87bd-a92c03a0b4ae",
+        "response_metadata": {},
+        "type": "human"
+      },
+      {
+        "additional_kwargs": {
+          "refusal": null
+        },
+        "content": "",
+        "id": "lc_run--01a18852-47e5-7851-8e91-9e4ff621fe50-0",
+        "invalid_tool_calls": [],
+        "response_metadata": {
+          "finish_reason": "tool_calls",
+          "id": "chatcmpl-ca1cd42b-0c9e-9583-bc96-0bdce9db2f7a",
+          "logprobs": null,
+          "model_name": "qwen3.8-flash",
+          "model_provider": "openai",
+          "system_fingerprint": null,
+          "token_usage": {
+            "completion_tokens": 55,
+            "completion_tokens_details": {
+              "accepted_prediction_tokens": null,
+              "audio_tokens": null,
+              "reasoning_tokens": 25,
+              "rejected_prediction_tokens": null,
+              "text_tokens": 55
+            },
+            "prompt_tokens": 6003,
+            "prompt_tokens_details": {
+              "audio_tokens": null,
+              "cache_write_tokens": null,
+              "cached_tokens": 0,
+              "image_tokens": null,
+              "text_tokens": 6003
+            },
+            "total_tokens": 6058
+          }
+        },
+        "tool_calls": [
+          {
+            "args": {
+              "slug": "approval-demo"
+            },
+            "id": "call_4cbf27d84df744b4b67861f8",
+            "name": "publish_report",
+            "type": "tool_call"
+          }
+        ],
+        "type": "ai",
+        "usage_metadata": {
+          "input_token_details": {
+            "cache_read": 0
+          },
+          "input_tokens": 6003,
+          "output_token_details": {
+            "reasoning": 25
+          },
+          "output_tokens": 55,
+          "total_tokens": 6058
+        }
+      },
+      {
+        "additional_kwargs": {},
+        "content": "Recorded local test publication for blogs/approval-demo/post.md",
+        "id": "219f1275-49c0-4852-a7f2-eba14d1b064a",
+        "name": "publish_report",
+        "response_metadata": {},
+        "status": "success",
+        "tool_call_id": "call_4cbf27d84df744b4b67861f8",
+        "type": "tool"
+      },
+      {
+        "additional_kwargs": {
+          "refusal": null
+        },
+        "content": "Done — `publish_report(slug='approval-demo')` was called once and returned success.\n\n- Result: `Recorded local test publication for blogs/approval-demo/post.md`\n- No retries were attempted, and I did not write the publication log manually.\n- Stopping here as instructed; nothing else was created or modified.",
+        "id": "lc_run--01a18852-4d9f-7171-8d69-8058489816a3-0",
+        "invalid_tool_calls": [],
+        "response_metadata": {
+          "finish_reason": "stop",
+          "id": "chatcmpl-dec31569-e860-9924-a69d-7c5e37cebf64",
+          "logprobs": null,
+          "model_name": "qwen3.8-flash",
+          "model_provider": "openai",
+          "system_fingerprint": null,
+          "token_usage": {
+            "completion_tokens": 164,
+            "completion_tokens_details": {
+              "accepted_prediction_tokens": null,
+              "audio_tokens": null,
+              "reasoning_tokens": 92,
+              "rejected_prediction_tokens": null,
+              "text_tokens": 164
+            },
+            "prompt_tokens": 6061,
+            "prompt_tokens_details": {
+              "audio_tokens": null,
+              "cache_write_tokens": null,
+              "cached_tokens": 5376,
+              "image_tokens": null,
+              "text_tokens": 6061
+            },
+            "total_tokens": 6225
+          }
+        },
+        "tool_calls": [],
+        "type": "ai",
+        "usage_metadata": {
+          "input_token_details": {
+            "cache_read": 5376
+          },
+          "input_tokens": 6061,
+          "output_token_details": {
+            "reasoning": 92
+          },
+          "output_tokens": 164,
+          "total_tokens": 6225
+        }
+      }
+    ]
+  },
+  "parent_run_id": null,
+  "run_id": "01a18852-4d90-7a02-a833-fc602ee29e68",
+  "run_type": "chain",
+  "start_time": "2026-10-29T15:40:57.616872Z",
+  "status": "",
+  "tags": null,
+  "token_usage": null,
+  "trace_id": "01a18852-4d90-7a02-a833-fc602ee29e68"
+}

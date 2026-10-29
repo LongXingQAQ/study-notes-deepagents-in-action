@@ -1,0 +1,181 @@
+{
+  "costs": null,
+  "custom_metadata": {
+    "LANGCHAIN_OPENAI_STREAM_CHUNK_TIMEOUT_S": "300",
+    "LANGSMITH_ENDPOINT": "https://api.smith.langchain.com",
+    "LANGSMITH_PROJECT": "deepagents-course",
+    "LANGSMITH_TRACING": "true",
+    "lc_agent_name": null,
+    "lc_versions": {
+      "deepagents": "0.7.8"
+    },
+    "ls_integration": "deepagents",
+    "ls_run_depth": 0,
+    "thread_id": "1a18a17a-7ce6-407a-9bff-1a79fa34cca2"
+  },
+  "duration_ms": 4937,
+  "end_time": "2026-10-29T15:43:01.797335Z",
+  "error": null,
+  "events": [
+    {
+      "kwargs": null,
+      "name": "start",
+      "time": "2026-10-29T15:42:56.860211Z"
+    },
+    {
+      "kwargs": null,
+      "name": "end",
+      "time": "2026-10-29T15:43:01.797335Z"
+    }
+  ],
+  "first_token_time": null,
+  "inputs": {
+    "input": {
+      "goto": [],
+      "graph": null,
+      "resume": {
+        "decisions": [
+          {
+            "type": "reject"
+          }
+        ]
+      },
+      "update": null
+    }
+  },
+  "name": "LangGraph",
+  "outputs": {
+    "messages": [
+      {
+        "additional_kwargs": {},
+        "content": "Call publish_report(slug='approval-demo') exactly once. This is a local test. After it returns, stop; do not retry rejected publication or write the log yourself.",
+        "id": "fb0d1f12-683d-4042-bfc3-594fbcd36391",
+        "response_metadata": {},
+        "type": "human"
+      },
+      {
+        "additional_kwargs": {
+          "refusal": null
+        },
+        "content": "",
+        "id": "lc_run--01a18854-1a41-76c3-a427-05f70bedf3dc-0",
+        "invalid_tool_calls": [],
+        "response_metadata": {
+          "finish_reason": "tool_calls",
+          "id": "chatcmpl-fbf980a0-b4df-9ec0-959f-d4055c21133f",
+          "logprobs": null,
+          "model_name": "qwen3.8-flash",
+          "model_provider": "openai",
+          "system_fingerprint": null,
+          "token_usage": {
+            "completion_tokens": 59,
+            "completion_tokens_details": {
+              "accepted_prediction_tokens": null,
+              "audio_tokens": null,
+              "reasoning_tokens": 29,
+              "rejected_prediction_tokens": null,
+              "text_tokens": 59
+            },
+            "prompt_tokens": 6003,
+            "prompt_tokens_details": {
+              "audio_tokens": null,
+              "cache_write_tokens": null,
+              "cached_tokens": 5376,
+              "image_tokens": null,
+              "text_tokens": 6003
+            },
+            "total_tokens": 6062
+          }
+        },
+        "tool_calls": [
+          {
+            "args": {
+              "slug": "approval-demo"
+            },
+            "id": "call_eadb57b91e594add91b676ac",
+            "name": "publish_report",
+            "type": "tool_call"
+          }
+        ],
+        "type": "ai",
+        "usage_metadata": {
+          "input_token_details": {
+            "cache_read": 5376
+          },
+          "input_tokens": 6003,
+          "output_token_details": {
+            "reasoning": 29
+          },
+          "output_tokens": 59,
+          "total_tokens": 6062
+        }
+      },
+      {
+        "additional_kwargs": {},
+        "content": "User rejected the tool call for `publish_report` with id call_eadb57b91e594add91b676ac. The tool was not executed. Do not retry this tool call unless the user explicitly requests it.",
+        "id": "05f8cd21-2930-42e0-877a-3902ef3704fa",
+        "name": "publish_report",
+        "response_metadata": {},
+        "status": "error",
+        "tool_call_id": "call_eadb57b91e594add91b676ac",
+        "type": "tool"
+      },
+      {
+        "additional_kwargs": {
+          "refusal": null
+        },
+        "content": "结论：`publish_report(slug='approval-demo')` 的调用被拒绝，未执行任何发布记录，我已按指示停止。\n\n- 调用只发起了一次（id `call_eadb57b91e594add91b676ac`），返回结果为「用户拒绝」，工具未运行。\n- 我没有重试该调用，也没有自行写入 `blogs/approval-demo/publication.log` 或任何等价文件。\n- 文件系统状态未改变：`blogs/approval-demo/` 下没有新增或修改的内容；如需继续，请明确告知是要重试发布还是改为其他步骤。",
+        "id": "lc_run--01a18854-1f66-7672-9ca9-3e24799dffa6-0",
+        "invalid_tool_calls": [],
+        "response_metadata": {
+          "finish_reason": "stop",
+          "id": "chatcmpl-af7b1168-0966-9fef-928a-a48d126a1b05",
+          "logprobs": null,
+          "model_name": "qwen3.8-flash",
+          "model_provider": "openai",
+          "system_fingerprint": null,
+          "token_usage": {
+            "completion_tokens": 232,
+            "completion_tokens_details": {
+              "accepted_prediction_tokens": null,
+              "audio_tokens": null,
+              "reasoning_tokens": 93,
+              "rejected_prediction_tokens": null,
+              "text_tokens": 232
+            },
+            "prompt_tokens": 6100,
+            "prompt_tokens_details": {
+              "audio_tokens": null,
+              "cache_write_tokens": null,
+              "cached_tokens": 5376,
+              "image_tokens": null,
+              "text_tokens": 6100
+            },
+            "total_tokens": 6332
+          }
+        },
+        "tool_calls": [],
+        "type": "ai",
+        "usage_metadata": {
+          "input_token_details": {
+            "cache_read": 5376
+          },
+          "input_tokens": 6100,
+          "output_token_details": {
+            "reasoning": 93
+          },
+          "output_tokens": 232,
+          "total_tokens": 6332
+        }
+      }
+    ]
+  },
+  "parent_run_id": null,
+  "run_id": "01a18854-1f5c-7842-8d58-b1f843c514ed",
+  "run_type": "chain",
+  "start_time": "2026-10-29T15:42:56.860211Z",
+  "status": "",
+  "tags": null,
+  "token_usage": null,
+  "trace_id": "01a18854-1f5c-7842-8d58-b1f843c514ed"
+}
