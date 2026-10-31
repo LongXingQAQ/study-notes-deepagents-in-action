@@ -1,0 +1,89 @@
+--- before/agent.py
++++ after/agent.py
+@@ -289,6 +289,8 @@
+             "Include the report slug and exact review criteria in the task. "
+             "Generate an image only when images are enabled AND the user requests it. "
+             "Save preferences only when the user explicitly asks to remember them."
++            "For requests to write and save a report from local sources, first read "
++            "/skills/local-report/SKILL.md before reading sources or searching for files. "
+         ),
+         tools=tools,
+         subagents=configured_subagents,
+--- before/lesson_tools.py
++++ after/lesson_tools.py
+@@ -28,7 +28,10 @@
+ def read_source(name: str) -> str:
+     """Read a fixed course source by filename, such as planning.md or files.md."""
+     if not re.fullmatch(r"[a-z0-9_-]+\.md", name):
+-        raise ValueError("Use a Markdown filename from sources/")
++        raise ToolException(
++    "Use only a filename such as task2-notes.md; "
++    "do not include sources/ or /sources/."
++)
+ 
+     try:
+         return _path("sources", name).read_text(encoding="utf-8")
+@@ -52,9 +55,23 @@
+ 
+ @tool
+ def read_report(slug: str) -> str:
+-    """Read back blogs/<slug>/post.md to verify the actual saved report."""
+-    return _path("blogs", _slug(slug), "post.md").read_text(encoding="utf-8")
++    """Read an existing saved report.
+ 
++    Save a new report with save_report before reading it back.
++    """
++    target = _path("blogs", _slug(slug), "post.md")
++
++    try:
++        return target.read_text(encoding="utf-8")
++    except FileNotFoundError as exc:
++        raise ToolException(
++            f"Report file not found: /blogs/{slug}/post.md. "
++            "If creating a new report, use save_report first, "
++            "then read_report to verify it."
++        ) from exc
++
++
++read_report.handle_tool_error = True
+ 
+ @tool
+ def save_preference(key: str, value: str) -> str:
+--- before/skills/local-report/SKILL.md
++++ after/skills/local-report/SKILL.md
+@@ -32,14 +32,27 @@
+ 
+ ## 资料缺失处理
+ 
+-- 如果读取失败，先根据工具返回判断原因。
+-- 如果文件不存在，在 `/sources/` 内按文件名查找一次。
+-- 找到明确对应的文件后，使用实际路径重新读取。
+-- 如果只有名称相似的候选文件，先向用户确认。
+-- 如果仍未找到，说明缺失文件，请用户补充或确认路径。
+-- 权限或其他读取错误，应说明具体问题，不反复查找。
+-- 必需资料未成功读取前，不生成或保存正式报告，
+-  不把相关任务标记为完成。
++当 read_source 返回文件不存在时，按以下顺序处理：
++
++1. 只允许额外调用一次 glob，在 /sources/ 内查找原文件名。
++   例如，缺失 task7-missing-notes.md 时，参数必须是：
++   {"pattern": "**/task7-missing-notes.md", "path": "/sources/"}
++
++2. 不扩大到工作区根目录 /，不进行第二次 glob，
++   不改用 ls、grep 或读取其他资料继续寻找替代文件。
++
++3. 如果找到唯一对应文件，使用实际路径重新读取。
++   如果结果不唯一，先请用户确认，不自行选择。
++
++4. 如果没有找到，立即说明缺失的文件名，
++   请用户补充文件或确认路径，结束本轮处理。
++   不自行使用名称相似的资料替代。
++
++5. 必需资料未成功读取前，不生成或保存正式报告，
++   不把报告编写、保存和核验任务标记为完成。
++
++如果是权限错误或其他读取错误，说明实际错误，
++不进入文件查找流程。
+ 
+ ## 内容与完成要求
+ 

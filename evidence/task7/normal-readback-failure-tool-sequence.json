@@ -1,0 +1,47 @@
+[
+  {
+    "run_id": "01a19293-5da2-76c1-a468-4638809730b4",
+    "start_time": "2026-10-31T15:28:13.730054Z",
+    "name": "write_todos",
+    "inputs": {
+      "todos": [
+        {
+          "content": "读取资料 sources/task2-notes.md",
+          "status": "in_progress"
+        },
+        {
+          "content": "确认 slug task7-normal-report 是否已有报告（避免覆盖）",
+          "status": "pending"
+        },
+        {
+          "content": "根据资料与模板编写学习安排报告（含学习安排、报告要求、检查要求、来源与性质）",
+          "status": "pending"
+        },
+        {
+          "content": "使用 save_report 保存为 slug task7-normal-report",
+          "status": "pending"
+        },
+        {
+          "content": "使用 read_report 读回核验内容完整性与来源标注",
+          "status": "pending"
+        }
+      ]
+    }
+  },
+  {
+    "run_id": "01a19293-68ce-71a0-ae42-dc84d5a6d59c",
+    "start_time": "2026-10-31T15:28:16.590813Z",
+    "name": "read_source",
+    "inputs": {
+      "name": "task2-notes.md"
+    }
+  },
+  {
+    "run_id": "01a19293-746a-7b83-b9ab-38f371a4d0af",
+    "start_time": "2026-10-31T15:28:19.562254Z",
+    "name": "read_report",
+    "inputs": {
+      "slug": "task7-normal-report"
+    }
+  }
+]

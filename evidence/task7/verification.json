@@ -1,0 +1,37 @@
+{
+  "provenance": "Derived checks against archived LangSmith root/tool exports and actual app files at archive time. This JSON is a verification summary, not an API raw response.",
+  "model": "qwen3.8-flash",
+  "normal_trace_id": "01a192b3-0b22-71e0-a207-80727414a337",
+  "missing_trace_id": "01a192b6-552f-7443-9f46-c4939ddbe8ee",
+  "checks": {
+    "normal_reads_skill_before_source": true,
+    "normal_source_filename_only": true,
+    "normal_save_before_readback": true,
+    "normal_saved_content_equals_disk": true,
+    "normal_readback_equals_disk": true,
+    "normal_required_sections_present": true,
+    "normal_final_todos_completed": true,
+    "normal_last_todo_update_after_readback": true,
+    "normal_root_has_no_error": true,
+    "missing_reads_skill_first": true,
+    "missing_source_returns_tool_error": true,
+    "missing_one_glob_scoped_to_sources": true,
+    "missing_no_alternative_search_or_report_save": true,
+    "missing_source_and_report_absent": true,
+    "missing_report_todos_not_completed": true,
+    "missing_root_has_no_error": true,
+    "final_cases_use_different_threads": true
+  },
+  "sha256": {
+    "code/after/agent.py": "4d8e36f25b8e878ccabbb7a2b59710ad4c278fd09b3465a8635c9c4b8f83fbd6",
+    "code/after/lesson_tools.py": "c17577c81302e64e95864a298f1173f36ddc2f7895e17ba624251b5037477f36",
+    "skills/local-report/SKILL.md": "68fbeefcc2d81dcce601128dd81cd85df12c4be32c9def8f3998de9d0af30c40",
+    "source.md": "45e45e18834b7200dc2f1e426057ffb2021d23f3126a79eb2625cdb76b763dd9",
+    "normal-report.md": "c7b771af4d927df6ae975798f839c2dd674c45342825b103f086379f54445568"
+  },
+  "limitations": [
+    "Only these fixed cases are accepted; not a general reliability guarantee.",
+    "Final live cases did not trigger invalid-filename correction or missing-report recovery; these branches were checked locally.",
+    "The normal overwrite check used a workspace-root glob; the sources-only restriction applies to missing-source handling."
+  ]
+}

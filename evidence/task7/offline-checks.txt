@@ -1,0 +1,28 @@
+Task7 无模型检查输出转录
+
+来源：学习助手在本次对话中对实际保存后的工具执行的本地检查，以及项目已有 pytest 测试输出。
+本文件是终端输出转录，不是程序自行生成的原始日志；没有为了归档重新运行模型。
+工具检查使用临时目录验证报告写入和读回，没有修改正式报告。
+
+HANDLERS: True True
+READ_SOURCE 'task2-notes.md' success PASS
+READ_SOURCE 'sources/task2-notes.md' error PASS
+READ_SOURCE '/sources/task2-notes.md' error PASS
+READ_SOURCE '../escape.md' error PASS
+READ_SOURCE 'sources/../../escape.md' error PASS
+READ_SOURCE 'task7-missing-notes.md' error PASS
+READ_REPORT missing returns error PASS
+SAVE_REPORT then READ_REPORT contents PASS
+REJECT invalid slug '../escape' PASS
+REJECT invalid slug '/tmp/escape' PASS
+REJECT invalid slug 'a/b' PASS
+REJECT invalid slug '' PASS
+
+已有测试命令（在主项目根目录）：
+.venv/bin/python -m pytest tests -q
+
+实际结果：
+15 passed in 17.32s
+
+测试使用 tests/conftest.py 中的脚本模型配置，关闭 LangSmith tracing，不调用付费模型。
+以上本地检查证明工具返回行为与现有机制测试通过，不证明真实模型一定会纠正错误参数。

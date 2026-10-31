@@ -1,0 +1,611 @@
+[
+  {
+    "costs": null,
+    "custom_metadata": {
+      "LANGCHAIN_OPENAI_STREAM_CHUNK_TIMEOUT_S": "300",
+      "LANGSMITH_ENDPOINT": "https://api.smith.langchain.com",
+      "LANGSMITH_PROJECT": "deepagents-course",
+      "LANGSMITH_TRACING": "true",
+      "assistant_id": "content_builder",
+      "checkpoint_ns": "d763e295-70fd-4a99-a158-d37779344ae4",
+      "graph_id": "content_builder",
+      "langgraph_checkpoint_ns": "tools:d934a358-0c5d-4a24-2146-4006e327efb4",
+      "langgraph_node": "tools",
+      "langgraph_path": [
+        "__pregel_push",
+        0,
+        false
+      ],
+      "langgraph_step": 24,
+      "langgraph_triggers": [
+        "__pregel_push"
+      ],
+      "lc_agent_name": null,
+      "lc_versions": {
+        "deepagents": "0.7.8"
+      },
+      "ls_integration": "deepagents",
+      "ls_method": "traceable",
+      "ls_run_depth": 3,
+      "thread_id": "206bbc6e-0876-4cf1-b3cd-957bc8637630"
+    },
+    "duration_ms": 0,
+    "end_time": "2026-10-31T15:23:45.253151Z",
+    "error": null,
+    "events": [
+      {
+        "kwargs": null,
+        "name": "start",
+        "time": "2026-10-31T15:23:45.252609Z"
+      },
+      {
+        "kwargs": null,
+        "name": "end",
+        "time": "2026-10-31T15:23:45.253151Z"
+      }
+    ],
+    "first_token_time": null,
+    "inputs": {
+      "todos": [
+        {
+          "content": "读取资料 sources/task7-missing-notes.md（失败：文件不存在；glob 未找到）——等待用户提供文件或确认路径",
+          "status": "in_progress"
+        },
+        {
+          "content": "读取报告模板 /skills/local-report/assets/report-template.md",
+          "status": "completed"
+        },
+        {
+          "content": "根据资料与模板编写学习安排报告（阻塞：必需资料缺失）",
+          "status": "pending"
+        },
+        {
+          "content": "使用 save_report 保存为 slug task7-missing-report（阻塞：资料缺失，暂不保存）",
+          "status": "pending"
+        },
+        {
+          "content": "使用 read_report 读回核验内容与来源标注（阻塞）",
+          "status": "pending"
+        }
+      ]
+    },
+    "name": "write_todos",
+    "outputs": {
+      "output": {
+        "goto": [],
+        "graph": null,
+        "resume": null,
+        "update": {
+          "messages": [
+            {
+              "additional_kwargs": {},
+              "content": "Updated todo list to [{'content': '读取资料 sources/task7-missing-notes.md（失败：文件不存在；glob 未找到）——等待用户提供文件或确认路径', 'status': 'in_progress'}, {'content': '读取报告模板 /skills/local-report/assets/report-template.md', 'status': 'completed'}, {'content': '根据资料与模板编写学习安排报告（阻塞：必需资料缺失）', 'status': 'pending'}, {'content': '使用 save_report 保存为 slug task7-missing-report（阻塞：资料缺失，暂不保存）', 'status': 'pending'}, {'content': '使用 read_report 读回核验内容与来源标注（阻塞）', 'status': 'pending'}]",
+              "response_metadata": {},
+              "status": "success",
+              "tool_call_id": "call_4fa8855f11bc40b29f35feb4",
+              "type": "tool"
+            }
+          ],
+          "todos": [
+            {
+              "content": "读取资料 sources/task7-missing-notes.md（失败：文件不存在；glob 未找到）——等待用户提供文件或确认路径",
+              "status": "in_progress"
+            },
+            {
+              "content": "读取报告模板 /skills/local-report/assets/report-template.md",
+              "status": "completed"
+            },
+            {
+              "content": "根据资料与模板编写学习安排报告（阻塞：必需资料缺失）",
+              "status": "pending"
+            },
+            {
+              "content": "使用 save_report 保存为 slug task7-missing-report（阻塞：资料缺失，暂不保存）",
+              "status": "pending"
+            },
+            {
+              "content": "使用 read_report 读回核验内容与来源标注（阻塞）",
+              "status": "pending"
+            }
+          ]
+        }
+      }
+    },
+    "parent_run_id": "01a1928f-44e4-72c0-b884-8fb657037942",
+    "run_id": "01a1928f-44e4-7532-9c1a-8ba4911f20d8",
+    "run_type": "tool",
+    "start_time": "2026-10-31T15:23:45.252609Z",
+    "status": "",
+    "tags": [
+      "seq:step:1"
+    ],
+    "token_usage": null,
+    "trace_id": "01a1928e-d585-7c31-936f-5fd489ee3b7c"
+  },
+  {
+    "costs": null,
+    "custom_metadata": {
+      "LANGCHAIN_OPENAI_STREAM_CHUNK_TIMEOUT_S": "300",
+      "LANGSMITH_ENDPOINT": "https://api.smith.langchain.com",
+      "LANGSMITH_PROJECT": "deepagents-course",
+      "LANGSMITH_TRACING": "true",
+      "assistant_id": "content_builder",
+      "checkpoint_ns": "d763e295-70fd-4a99-a158-d37779344ae4",
+      "graph_id": "content_builder",
+      "langgraph_checkpoint_ns": "tools:ba0579e4-b14c-198c-6845-695451d1b212",
+      "langgraph_node": "tools",
+      "langgraph_path": [
+        "__pregel_push",
+        0,
+        false
+      ],
+      "langgraph_step": 21,
+      "langgraph_triggers": [
+        "__pregel_push"
+      ],
+      "lc_agent_name": null,
+      "lc_versions": {
+        "deepagents": "0.7.8"
+      },
+      "ls_integration": "deepagents",
+      "ls_method": "traceable",
+      "ls_run_depth": 3,
+      "thread_id": "206bbc6e-0876-4cf1-b3cd-957bc8637630"
+    },
+    "duration_ms": 1,
+    "end_time": "2026-10-31T15:23:37.395073Z",
+    "error": null,
+    "events": [
+      {
+        "kwargs": null,
+        "name": "start",
+        "time": "2026-10-31T15:23:37.393353Z"
+      },
+      {
+        "kwargs": null,
+        "name": "end",
+        "time": "2026-10-31T15:23:37.395073Z"
+      }
+    ],
+    "first_token_time": null,
+    "inputs": {
+      "file_path": "/skills/local-report/assets/report-template.md",
+      "limit": 1000
+    },
+    "name": "read_file",
+    "outputs": {
+      "output": {
+        "additional_kwargs": {},
+        "content": " 1  # 报告标题\n 2  \n 3  ## 资料来源\n 4  列出实际使用的资料路径，并说明资料性质。\n 5  \n 6  ## 报告正文\n 7  根据用户要求组织内容，保留资料中的关键事实。\n 8  \n 9  ## 结论\n10  说明资料能够支持的结论，以及仍无法确认的内容。",
+        "name": "read_file",
+        "response_metadata": {},
+        "status": "success",
+        "tool_call_id": "call_877304d1c9294a2dbb270662",
+        "type": "tool"
+      }
+    },
+    "parent_run_id": "01a1928f-2630-7b02-ac06-1cd593da2dc2",
+    "run_id": "01a1928f-2631-7c71-bcd3-619c62a1d4ae",
+    "run_type": "tool",
+    "start_time": "2026-10-31T15:23:37.393353Z",
+    "status": "",
+    "tags": [
+      "seq:step:1"
+    ],
+    "token_usage": null,
+    "trace_id": "01a1928e-d585-7c31-936f-5fd489ee3b7c"
+  },
+  {
+    "costs": null,
+    "custom_metadata": {
+      "LANGCHAIN_OPENAI_STREAM_CHUNK_TIMEOUT_S": "300",
+      "LANGSMITH_ENDPOINT": "https://api.smith.langchain.com",
+      "LANGSMITH_PROJECT": "deepagents-course",
+      "LANGSMITH_TRACING": "true",
+      "assistant_id": "content_builder",
+      "checkpoint_ns": "d763e295-70fd-4a99-a158-d37779344ae4",
+      "graph_id": "content_builder",
+      "langgraph_checkpoint_ns": "tools:06c23f0d-024a-8fae-5703-8f4fa55b78ee",
+      "langgraph_node": "tools",
+      "langgraph_path": [
+        "__pregel_push",
+        0,
+        false
+      ],
+      "langgraph_step": 18,
+      "langgraph_triggers": [
+        "__pregel_push"
+      ],
+      "lc_agent_name": null,
+      "lc_versions": {
+        "deepagents": "0.7.8"
+      },
+      "ls_integration": "deepagents",
+      "ls_method": "traceable",
+      "ls_run_depth": 3,
+      "thread_id": "206bbc6e-0876-4cf1-b3cd-957bc8637630"
+    },
+    "duration_ms": 3,
+    "end_time": "2026-10-31T15:23:30.612513Z",
+    "error": null,
+    "events": [
+      {
+        "kwargs": null,
+        "name": "start",
+        "time": "2026-10-31T15:23:30.609512Z"
+      },
+      {
+        "kwargs": null,
+        "name": "end",
+        "time": "2026-10-31T15:23:30.612513Z"
+      }
+    ],
+    "first_token_time": null,
+    "inputs": {
+      "path": "/sources/",
+      "pattern": "**/task7-missing-notes.md"
+    },
+    "name": "glob",
+    "outputs": {
+      "output": {
+        "additional_kwargs": {},
+        "content": "No files found",
+        "name": "glob",
+        "response_metadata": {},
+        "status": "success",
+        "tool_call_id": "call_1622b2fda0794893ac4ed2f6",
+        "type": "tool"
+      }
+    },
+    "parent_run_id": "01a1928f-0bb0-7e52-82fa-add3899601bf",
+    "run_id": "01a1928f-0bb1-75b2-922d-abb2d74cc1cb",
+    "run_type": "tool",
+    "start_time": "2026-10-31T15:23:30.609512Z",
+    "status": "",
+    "tags": [
+      "seq:step:1"
+    ],
+    "token_usage": null,
+    "trace_id": "01a1928e-d585-7c31-936f-5fd489ee3b7c"
+  },
+  {
+    "costs": null,
+    "custom_metadata": {
+      "LANGCHAIN_OPENAI_STREAM_CHUNK_TIMEOUT_S": "300",
+      "LANGSMITH_ENDPOINT": "https://api.smith.langchain.com",
+      "LANGSMITH_PROJECT": "deepagents-course",
+      "LANGSMITH_TRACING": "true",
+      "assistant_id": "content_builder",
+      "checkpoint_ns": "d763e295-70fd-4a99-a158-d37779344ae4",
+      "graph_id": "content_builder",
+      "langgraph_checkpoint_ns": "tools:1996ea09-725a-130f-3265-c5b41409f604",
+      "langgraph_node": "tools",
+      "langgraph_path": [
+        "__pregel_push",
+        0,
+        false
+      ],
+      "langgraph_step": 15,
+      "langgraph_triggers": [
+        "__pregel_push"
+      ],
+      "lc_agent_name": null,
+      "lc_versions": {
+        "deepagents": "0.7.8"
+      },
+      "ls_integration": "deepagents",
+      "ls_method": "traceable",
+      "ls_run_depth": 3,
+      "thread_id": "206bbc6e-0876-4cf1-b3cd-957bc8637630"
+    },
+    "duration_ms": 2,
+    "end_time": "2026-10-31T15:23:28.938274Z",
+    "error": null,
+    "events": [
+      {
+        "kwargs": null,
+        "name": "start",
+        "time": "2026-10-31T15:23:28.935518Z"
+      },
+      {
+        "kwargs": null,
+        "name": "end",
+        "time": "2026-10-31T15:23:28.938274Z"
+      }
+    ],
+    "first_token_time": null,
+    "inputs": {
+      "name": "task7-missing-notes.md"
+    },
+    "name": "read_source",
+    "outputs": {
+      "output": {
+        "additional_kwargs": {},
+        "content": "Source file not found: /sources/task7-missing-notes.md",
+        "name": "read_source",
+        "response_metadata": {},
+        "status": "error",
+        "tool_call_id": "call_8c94522c7b264dafb62a8051",
+        "type": "tool"
+      }
+    },
+    "parent_run_id": "01a1928f-0526-7323-b22c-ccf8973547bf",
+    "run_id": "01a1928f-0527-7a21-a726-6dee1c709c1d",
+    "run_type": "tool",
+    "start_time": "2026-10-31T15:23:28.935518Z",
+    "status": "",
+    "tags": [
+      "seq:step:1"
+    ],
+    "token_usage": null,
+    "trace_id": "01a1928e-d585-7c31-936f-5fd489ee3b7c"
+  },
+  {
+    "costs": null,
+    "custom_metadata": {
+      "LANGCHAIN_OPENAI_STREAM_CHUNK_TIMEOUT_S": "300",
+      "LANGSMITH_ENDPOINT": "https://api.smith.langchain.com",
+      "LANGSMITH_PROJECT": "deepagents-course",
+      "LANGSMITH_TRACING": "true",
+      "assistant_id": "content_builder",
+      "checkpoint_ns": "d763e295-70fd-4a99-a158-d37779344ae4",
+      "graph_id": "content_builder",
+      "langgraph_checkpoint_ns": "tools:f4f80d07-9a7f-9a43-8a37-902ff944237b",
+      "langgraph_node": "tools",
+      "langgraph_path": [
+        "__pregel_push",
+        0,
+        false
+      ],
+      "langgraph_step": 12,
+      "langgraph_triggers": [
+        "__pregel_push"
+      ],
+      "lc_agent_name": null,
+      "lc_versions": {
+        "deepagents": "0.7.8"
+      },
+      "ls_integration": "deepagents",
+      "ls_method": "traceable",
+      "ls_run_depth": 3,
+      "thread_id": "206bbc6e-0876-4cf1-b3cd-957bc8637630"
+    },
+    "duration_ms": 0,
+    "end_time": "2026-10-31T15:23:27.34899Z",
+    "error": null,
+    "events": [
+      {
+        "kwargs": null,
+        "name": "start",
+        "time": "2026-10-31T15:23:27.348272Z"
+      },
+      {
+        "kwargs": null,
+        "name": "end",
+        "time": "2026-10-31T15:23:27.34899Z"
+      }
+    ],
+    "first_token_time": null,
+    "inputs": {
+      "todos": [
+        {
+          "content": "读取资料 sources/task7-missing-notes.md",
+          "status": "in_progress"
+        },
+        {
+          "content": "读取报告模板 /skills/local-report/assets/report-template.md",
+          "status": "in_progress"
+        },
+        {
+          "content": "根据资料与模板编写学习安排报告",
+          "status": "pending"
+        },
+        {
+          "content": "使用 save_report 保存为 slug task7-missing-report",
+          "status": "pending"
+        },
+        {
+          "content": "使用 read_report 读回核验内容与来源标注",
+          "status": "pending"
+        }
+      ]
+    },
+    "name": "write_todos",
+    "outputs": {
+      "output": {
+        "goto": [],
+        "graph": null,
+        "resume": null,
+        "update": {
+          "messages": [
+            {
+              "additional_kwargs": {},
+              "content": "Updated todo list to [{'content': '读取资料 sources/task7-missing-notes.md', 'status': 'in_progress'}, {'content': '读取报告模板 /skills/local-report/assets/report-template.md', 'status': 'in_progress'}, {'content': '根据资料与模板编写学习安排报告', 'status': 'pending'}, {'content': '使用 save_report 保存为 slug task7-missing-report', 'status': 'pending'}, {'content': '使用 read_report 读回核验内容与来源标注', 'status': 'pending'}]",
+              "response_metadata": {},
+              "status": "success",
+              "tool_call_id": "call_c1d465bfaaa84924aff528b8",
+              "type": "tool"
+            }
+          ],
+          "todos": [
+            {
+              "content": "读取资料 sources/task7-missing-notes.md",
+              "status": "in_progress"
+            },
+            {
+              "content": "读取报告模板 /skills/local-report/assets/report-template.md",
+              "status": "in_progress"
+            },
+            {
+              "content": "根据资料与模板编写学习安排报告",
+              "status": "pending"
+            },
+            {
+              "content": "使用 save_report 保存为 slug task7-missing-report",
+              "status": "pending"
+            },
+            {
+              "content": "使用 read_report 读回核验内容与来源标注",
+              "status": "pending"
+            }
+          ]
+        }
+      }
+    },
+    "parent_run_id": "01a1928e-fef3-74e2-abc4-b7798263a7d9",
+    "run_id": "01a1928e-fef4-7973-b5e3-8448d87eccd8",
+    "run_type": "tool",
+    "start_time": "2026-10-31T15:23:27.348272Z",
+    "status": "",
+    "tags": [
+      "seq:step:1"
+    ],
+    "token_usage": null,
+    "trace_id": "01a1928e-d585-7c31-936f-5fd489ee3b7c"
+  },
+  {
+    "costs": null,
+    "custom_metadata": {
+      "LANGCHAIN_OPENAI_STREAM_CHUNK_TIMEOUT_S": "300",
+      "LANGSMITH_ENDPOINT": "https://api.smith.langchain.com",
+      "LANGSMITH_PROJECT": "deepagents-course",
+      "LANGSMITH_TRACING": "true",
+      "assistant_id": "content_builder",
+      "checkpoint_ns": "d763e295-70fd-4a99-a158-d37779344ae4",
+      "graph_id": "content_builder",
+      "langgraph_checkpoint_ns": "tools:f43942d1-32f1-ca9e-571a-de1c1bc79fe4",
+      "langgraph_node": "tools",
+      "langgraph_path": [
+        "__pregel_push",
+        0,
+        false
+      ],
+      "langgraph_step": 9,
+      "langgraph_triggers": [
+        "__pregel_push"
+      ],
+      "lc_agent_name": null,
+      "lc_versions": {
+        "deepagents": "0.7.8"
+      },
+      "ls_integration": "deepagents",
+      "ls_method": "traceable",
+      "ls_run_depth": 3,
+      "thread_id": "206bbc6e-0876-4cf1-b3cd-957bc8637630"
+    },
+    "duration_ms": 1,
+    "end_time": "2026-10-31T15:23:22.273113Z",
+    "error": null,
+    "events": [
+      {
+        "kwargs": null,
+        "name": "start",
+        "time": "2026-10-31T15:23:22.271579Z"
+      },
+      {
+        "kwargs": null,
+        "name": "end",
+        "time": "2026-10-31T15:23:22.273113Z"
+      }
+    ],
+    "first_token_time": null,
+    "inputs": {
+      "file_path": "/skills/local-report/SKILL.md",
+      "limit": 1000
+    },
+    "name": "read_file",
+    "outputs": {
+      "output": {
+        "additional_kwargs": {},
+        "content": " 1  ---\n 2  name: local-report\n 3  description: 当用户需要根据指定的本地资料编写报告，并要求将成果保存为本地文件时使用。\n 4  ---\n 5  \n 6  # 本地资料报告\n 7  \n 8  根据用户指定的本地资料编写报告，保留来源，并核验实际保存的内容。\n 9  \n10  ## 确认输入\n11  \n12  需要明确：\n13  - 使用哪些资料文件。\n14  - 报告的主题和具体要求。\n15  - 保存报告使用的 slug。\n16  \n17  缺少必要信息时，先向用户询问。\n18  \n19  ## 工作流程\n20  \n21  1. 使用 write_todos 规划读取资料、编写报告、保存报告和读回核验。\n22  2. 使用 read_source 读取用户指定的资料，等待实际返回结果。\n23  3. 使用 read_file 读取报告模板：\n24     `/skills/local-report/assets/report-template.md`。\n25  4. 根据已读取的资料和模板编写报告，满足用户的具体要求。\n26  5. 使用 save_report(slug, content) 保存报告。\n27  6. 保存成功后，使用 read_report(slug) 读回报告。\n28  7. 检查读回内容是否满足要求，来源标注是否保留。\n29  8. 核验通过后，更新 Todo，再向用户说明保存路径和结果。\n30  \n31  每个有依赖的步骤，都必须等待前一步工具返回后再继续。\n32  \n33  ## 资料缺失处理\n34  \n35  当 read_source 返回文件不存在时，按以下顺序处理：\n36  \n37  1. 只允许额外调用一次 glob，在 /sources/ 内查找原文件名。\n38     例如，缺失 task7-missing-notes.md 时，参数必须是：\n39     {\"pattern\": \"**/task7-missing-notes.md\", \"path\": \"/sources/\"}\n40  \n41  2. 不扩大到工作区根目录 /，不进行第二次 glob，\n42     不改用 ls、grep 或读取其他资料继续寻找替代文件。\n43  \n44  3. 如果找到唯一对应文件，使用实际路径重新读取。\n45     如果结果不唯一，先请用户确认，不自行选择。\n46  \n47  4. 如果没有找到，立即说明缺失的文件名，\n48     请用户补充文件或确认路径，结束本轮处理。\n49     不自行使用名称相似的资料替代。\n50  \n51  5. 必需资料未成功读取前，不生成或保存正式报告，\n52     不把报告编写、保存和核验任务标记为完成。\n53  \n54  如果是权限错误或其他读取错误，说明实际错误，\n55  不进入文件查找流程。\n56  \n57  ## 内容与完成要求\n58  \n59  - 只依据实际读取的资料，不编造事实或来源。\n60  - 自编练习资料应明确注明其性质。\n61  - 不联网、不生成图片、不修改原始资料、不委派子 Agent。\n62  - 如果模板缺失，说明缺失路径并停止编写。\n63  - 如果保存或读回失败，保留对应任务未完成状态。\n64  - 如果读回内容不符合要求，修正后重新保存、读回核验。\n65  - 用户没有允许覆盖时，不覆盖已有报告，应先询问。",
+        "name": "read_file",
+        "response_metadata": {},
+        "status": "success",
+        "tool_call_id": "call_da5e13c113324dea849c0899",
+        "type": "tool"
+      }
+    },
+    "parent_run_id": "01a1928e-eb1f-7d11-ac68-c9bab57beb8e",
+    "run_id": "01a1928e-eb1f-7140-a82e-4c438c6fe688",
+    "run_type": "tool",
+    "start_time": "2026-10-31T15:23:22.271579Z",
+    "status": "",
+    "tags": [
+      "seq:step:1"
+    ],
+    "token_usage": null,
+    "trace_id": "01a1928e-d585-7c31-936f-5fd489ee3b7c"
+  },
+  {
+    "costs": null,
+    "custom_metadata": {
+      "LANGCHAIN_OPENAI_STREAM_CHUNK_TIMEOUT_S": "300",
+      "LANGSMITH_ENDPOINT": "https://api.smith.langchain.com",
+      "LANGSMITH_PROJECT": "deepagents-course",
+      "LANGSMITH_TRACING": "true",
+      "assistant_id": "content_builder",
+      "checkpoint_ns": "d763e295-70fd-4a99-a158-d37779344ae4",
+      "graph_id": "content_builder",
+      "langgraph_checkpoint_ns": "tools:3efed912-04aa-28cc-cd97-a8df0703328b",
+      "langgraph_node": "tools",
+      "langgraph_path": [
+        "__pregel_push",
+        0,
+        false
+      ],
+      "langgraph_step": 6,
+      "langgraph_triggers": [
+        "__pregel_push"
+      ],
+      "lc_agent_name": null,
+      "lc_versions": {
+        "deepagents": "0.7.8"
+      },
+      "ls_integration": "deepagents",
+      "ls_method": "traceable",
+      "ls_run_depth": 3,
+      "thread_id": "206bbc6e-0876-4cf1-b3cd-957bc8637630"
+    },
+    "duration_ms": 5,
+    "end_time": "2026-10-31T15:23:19.393926Z",
+    "error": null,
+    "events": [
+      {
+        "kwargs": null,
+        "name": "start",
+        "time": "2026-10-31T15:23:19.38854Z"
+      },
+      {
+        "kwargs": null,
+        "name": "end",
+        "time": "2026-10-31T15:23:19.393926Z"
+      }
+    ],
+    "first_token_time": null,
+    "inputs": {
+      "file_path": "/local-report/SKILL.md"
+    },
+    "name": "read_file",
+    "outputs": {
+      "output": {
+        "additional_kwargs": {},
+        "content": "Error: File '/local-report/SKILL.md' not found",
+        "name": "read_file",
+        "response_metadata": {},
+        "status": "error",
+        "tool_call_id": "call_dfcb0f9d30ff4a069b2bf836",
+        "type": "tool"
+      }
+    },
+    "parent_run_id": "01a1928e-dfda-7521-a7f4-ba35d265763e",
+    "run_id": "01a1928e-dfdc-7002-92da-6ecf3c393729",
+    "run_type": "tool",
+    "start_time": "2026-10-31T15:23:19.38854Z",
+    "status": "",
+    "tags": [
+      "seq:step:1"
+    ],
+    "token_usage": null,
+    "trace_id": "01a1928e-d585-7c31-936f-5fd489ee3b7c"
+  }
+]

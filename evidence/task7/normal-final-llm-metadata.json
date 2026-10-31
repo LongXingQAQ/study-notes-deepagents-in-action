@@ -1,0 +1,566 @@
+[
+  {
+    "run_id": "01a192b3-0b56-7210-a57b-e473e0b0d112",
+    "name": "ChatOpenAI",
+    "start_time": "2026-10-31T16:02:49.814152Z",
+    "end_time": "2026-10-31T16:02:52.264952Z",
+    "duration_ms": 2450,
+    "custom_metadata": {
+      "LANGCHAIN_OPENAI_STREAM_CHUNK_TIMEOUT_S": "300",
+      "LANGSMITH_ENDPOINT": "https://api.smith.langchain.com",
+      "LANGSMITH_PROJECT": "deepagents-course",
+      "LANGSMITH_TRACING": "true",
+      "_type": "openai-chat",
+      "assistant_id": "content_builder",
+      "checkpoint_ns": "98b7fb49-fda7-4038-9812-d43067d917c3",
+      "graph_id": "content_builder",
+      "langgraph_checkpoint_ns": "model:da1686e8-431f-b2d8-c3e2-adcada693f64",
+      "langgraph_node": "model",
+      "langgraph_path": [
+        "__pregel_pull",
+        "model"
+      ],
+      "langgraph_step": 4,
+      "langgraph_triggers": [
+        "branch:to:model"
+      ],
+      "lc_agent_name": null,
+      "lc_versions": {
+        "deepagents": "0.7.8",
+        "langchain": "1.4.3",
+        "langchain-core": "1.6.7",
+        "langchain-openai": "1.6.7"
+      },
+      "ls_integration": "langchain_chat_model",
+      "ls_method": "traceable",
+      "ls_model_name": "qwen3.8-flash",
+      "ls_model_type": "chat",
+      "ls_provider": "openai",
+      "ls_temperature": null,
+      "model": "qwen3.8-flash",
+      "model_name": "qwen3.8-flash",
+      "parallel_tool_calls": false,
+      "stop": null,
+      "stream": false,
+      "thread_id": "cdd1ac3f-ef0b-4f6b-aded-dbe25bbb6544",
+      "usage_metadata": {
+        "input_token_details": {
+          "cache_read": 0
+        },
+        "input_tokens": 6004,
+        "output_token_details": {
+          "reasoning": 61
+        },
+        "output_tokens": 111,
+        "total_tokens": 6115
+      }
+    },
+    "token_usage": {
+      "completion_tokens": 111,
+      "prompt_tokens": 6004,
+      "total_tokens": 6115
+    },
+    "error": null
+  },
+  {
+    "run_id": "01a192b3-14fc-7be3-9670-fa5c71c5ca7e",
+    "name": "ChatOpenAI",
+    "start_time": "2026-10-31T16:02:52.284276Z",
+    "end_time": "2026-10-31T16:02:55.762212Z",
+    "duration_ms": 3477,
+    "custom_metadata": {
+      "LANGCHAIN_OPENAI_STREAM_CHUNK_TIMEOUT_S": "300",
+      "LANGSMITH_ENDPOINT": "https://api.smith.langchain.com",
+      "LANGSMITH_PROJECT": "deepagents-course",
+      "LANGSMITH_TRACING": "true",
+      "_type": "openai-chat",
+      "assistant_id": "content_builder",
+      "checkpoint_ns": "98b7fb49-fda7-4038-9812-d43067d917c3",
+      "graph_id": "content_builder",
+      "langgraph_checkpoint_ns": "model:350c6241-16cc-1e94-b5bf-f91978bca7e5",
+      "langgraph_node": "model",
+      "langgraph_path": [
+        "__pregel_pull",
+        "model"
+      ],
+      "langgraph_step": 7,
+      "langgraph_triggers": [
+        "branch:to:model"
+      ],
+      "lc_agent_name": null,
+      "lc_versions": {
+        "deepagents": "0.7.8",
+        "langchain": "1.4.3",
+        "langchain-core": "1.6.7",
+        "langchain-openai": "1.6.7"
+      },
+      "ls_integration": "langchain_chat_model",
+      "ls_method": "traceable",
+      "ls_model_name": "qwen3.8-flash",
+      "ls_model_type": "chat",
+      "ls_provider": "openai",
+      "ls_temperature": null,
+      "model": "qwen3.8-flash",
+      "model_name": "qwen3.8-flash",
+      "parallel_tool_calls": false,
+      "stop": null,
+      "stream": false,
+      "thread_id": "cdd1ac3f-ef0b-4f6b-aded-dbe25bbb6544"
+    },
+    "token_usage": {
+      "completion_tokens": 253,
+      "prompt_tokens": 6900,
+      "total_tokens": 7153
+    },
+    "error": null
+  },
+  {
+    "run_id": "01a192b3-22aa-7711-9456-de5b5830db4e",
+    "name": "ChatOpenAI",
+    "start_time": "2026-10-31T16:02:55.786223Z",
+    "end_time": "2026-10-31T16:02:57.661527Z",
+    "duration_ms": 1875,
+    "custom_metadata": {
+      "LANGCHAIN_OPENAI_STREAM_CHUNK_TIMEOUT_S": "300",
+      "LANGSMITH_ENDPOINT": "https://api.smith.langchain.com",
+      "LANGSMITH_PROJECT": "deepagents-course",
+      "LANGSMITH_TRACING": "true",
+      "_type": "openai-chat",
+      "assistant_id": "content_builder",
+      "checkpoint_ns": "98b7fb49-fda7-4038-9812-d43067d917c3",
+      "graph_id": "content_builder",
+      "langgraph_checkpoint_ns": "model:86f11d0a-e68d-f6c9-f9b8-6809c7191231",
+      "langgraph_node": "model",
+      "langgraph_path": [
+        "__pregel_pull",
+        "model"
+      ],
+      "langgraph_step": 10,
+      "langgraph_triggers": [
+        "branch:to:model"
+      ],
+      "lc_agent_name": null,
+      "lc_versions": {
+        "deepagents": "0.7.8",
+        "langchain": "1.4.3",
+        "langchain-core": "1.6.7",
+        "langchain-openai": "1.6.7"
+      },
+      "ls_integration": "langchain_chat_model",
+      "ls_method": "traceable",
+      "ls_model_name": "qwen3.8-flash",
+      "ls_model_type": "chat",
+      "ls_provider": "openai",
+      "ls_temperature": null,
+      "model": "qwen3.8-flash",
+      "model_name": "qwen3.8-flash",
+      "parallel_tool_calls": false,
+      "stop": null,
+      "stream": false,
+      "thread_id": "cdd1ac3f-ef0b-4f6b-aded-dbe25bbb6544"
+    },
+    "token_usage": {
+      "completion_tokens": 130,
+      "prompt_tokens": 7161,
+      "total_tokens": 7291
+    },
+    "error": null
+  },
+  {
+    "run_id": "01a192b3-2a13-75d3-8882-1f6f65797e79",
+    "name": "ChatOpenAI",
+    "start_time": "2026-10-31T16:02:57.68324Z",
+    "end_time": "2026-10-31T16:02:59.511745Z",
+    "duration_ms": 1828,
+    "custom_metadata": {
+      "LANGCHAIN_OPENAI_STREAM_CHUNK_TIMEOUT_S": "300",
+      "LANGSMITH_ENDPOINT": "https://api.smith.langchain.com",
+      "LANGSMITH_PROJECT": "deepagents-course",
+      "LANGSMITH_TRACING": "true",
+      "_type": "openai-chat",
+      "assistant_id": "content_builder",
+      "checkpoint_ns": "98b7fb49-fda7-4038-9812-d43067d917c3",
+      "graph_id": "content_builder",
+      "langgraph_checkpoint_ns": "model:2ece48f3-1239-dbe2-c2ba-03ace51a7532",
+      "langgraph_node": "model",
+      "langgraph_path": [
+        "__pregel_pull",
+        "model"
+      ],
+      "langgraph_step": 13,
+      "langgraph_triggers": [
+        "branch:to:model"
+      ],
+      "lc_agent_name": null,
+      "lc_versions": {
+        "deepagents": "0.7.8",
+        "langchain": "1.4.3",
+        "langchain-core": "1.6.7",
+        "langchain-openai": "1.6.7"
+      },
+      "ls_integration": "langchain_chat_model",
+      "ls_method": "traceable",
+      "ls_model_name": "qwen3.8-flash",
+      "ls_model_type": "chat",
+      "ls_provider": "openai",
+      "ls_temperature": null,
+      "model": "qwen3.8-flash",
+      "model_name": "qwen3.8-flash",
+      "parallel_tool_calls": false,
+      "stop": null,
+      "stream": false,
+      "thread_id": "cdd1ac3f-ef0b-4f6b-aded-dbe25bbb6544"
+    },
+    "token_usage": {
+      "completion_tokens": 59,
+      "prompt_tokens": 7265,
+      "total_tokens": 7324
+    },
+    "error": null
+  },
+  {
+    "run_id": "01a192b3-315a-7c81-802e-d87633d084cc",
+    "name": "ChatOpenAI",
+    "start_time": "2026-10-31T16:02:59.546595Z",
+    "end_time": "2026-10-31T16:03:01.439676Z",
+    "duration_ms": 1893,
+    "custom_metadata": {
+      "LANGCHAIN_OPENAI_STREAM_CHUNK_TIMEOUT_S": "300",
+      "LANGSMITH_ENDPOINT": "https://api.smith.langchain.com",
+      "LANGSMITH_PROJECT": "deepagents-course",
+      "LANGSMITH_TRACING": "true",
+      "_type": "openai-chat",
+      "assistant_id": "content_builder",
+      "checkpoint_ns": "98b7fb49-fda7-4038-9812-d43067d917c3",
+      "graph_id": "content_builder",
+      "langgraph_checkpoint_ns": "model:96eabf3e-60f4-bf19-b1c5-738b46c3eb1b",
+      "langgraph_node": "model",
+      "langgraph_path": [
+        "__pregel_pull",
+        "model"
+      ],
+      "langgraph_step": 16,
+      "langgraph_triggers": [
+        "branch:to:model"
+      ],
+      "lc_agent_name": null,
+      "lc_versions": {
+        "deepagents": "0.7.8",
+        "langchain": "1.4.3",
+        "langchain-core": "1.6.7",
+        "langchain-openai": "1.6.7"
+      },
+      "ls_integration": "langchain_chat_model",
+      "ls_method": "traceable",
+      "ls_model_name": "qwen3.8-flash",
+      "ls_model_type": "chat",
+      "ls_provider": "openai",
+      "ls_temperature": null,
+      "model": "qwen3.8-flash",
+      "model_name": "qwen3.8-flash",
+      "parallel_tool_calls": false,
+      "stop": null,
+      "stream": false,
+      "thread_id": "cdd1ac3f-ef0b-4f6b-aded-dbe25bbb6544"
+    },
+    "token_usage": {
+      "completion_tokens": 87,
+      "prompt_tokens": 7417,
+      "total_tokens": 7504
+    },
+    "error": null
+  },
+  {
+    "run_id": "01a192b3-3d54-7b61-8e4a-32ce3051e04f",
+    "name": "ChatOpenAI",
+    "start_time": "2026-10-31T16:03:02.612511Z",
+    "end_time": "2026-10-31T16:03:05.819677Z",
+    "duration_ms": 3207,
+    "custom_metadata": {
+      "LANGCHAIN_OPENAI_STREAM_CHUNK_TIMEOUT_S": "300",
+      "LANGSMITH_ENDPOINT": "https://api.smith.langchain.com",
+      "LANGSMITH_PROJECT": "deepagents-course",
+      "LANGSMITH_TRACING": "true",
+      "_type": "openai-chat",
+      "assistant_id": "content_builder",
+      "checkpoint_ns": "98b7fb49-fda7-4038-9812-d43067d917c3",
+      "graph_id": "content_builder",
+      "langgraph_checkpoint_ns": "model:f7f7bc5d-9d96-673b-8437-ac3892fbc58a",
+      "langgraph_node": "model",
+      "langgraph_path": [
+        "__pregel_pull",
+        "model"
+      ],
+      "langgraph_step": 19,
+      "langgraph_triggers": [
+        "branch:to:model"
+      ],
+      "lc_agent_name": null,
+      "lc_versions": {
+        "deepagents": "0.7.8",
+        "langchain": "1.4.3",
+        "langchain-core": "1.6.7",
+        "langchain-openai": "1.6.7"
+      },
+      "ls_integration": "langchain_chat_model",
+      "ls_method": "traceable",
+      "ls_model_name": "qwen3.8-flash",
+      "ls_model_type": "chat",
+      "ls_provider": "openai",
+      "ls_temperature": null,
+      "model": "qwen3.8-flash",
+      "model_name": "qwen3.8-flash",
+      "parallel_tool_calls": false,
+      "stop": null,
+      "stream": false,
+      "thread_id": "cdd1ac3f-ef0b-4f6b-aded-dbe25bbb6544"
+    },
+    "token_usage": {
+      "completion_tokens": 190,
+      "prompt_tokens": 7480,
+      "total_tokens": 7670
+    },
+    "error": null
+  },
+  {
+    "run_id": "01a192b3-49f5-7881-87db-d074e0656b4c",
+    "name": "ChatOpenAI",
+    "start_time": "2026-10-31T16:03:05.845629Z",
+    "end_time": "2026-10-31T16:03:13.138854Z",
+    "duration_ms": 7293,
+    "custom_metadata": {
+      "LANGCHAIN_OPENAI_STREAM_CHUNK_TIMEOUT_S": "300",
+      "LANGSMITH_ENDPOINT": "https://api.smith.langchain.com",
+      "LANGSMITH_PROJECT": "deepagents-course",
+      "LANGSMITH_TRACING": "true",
+      "_type": "openai-chat",
+      "assistant_id": "content_builder",
+      "checkpoint_ns": "98b7fb49-fda7-4038-9812-d43067d917c3",
+      "graph_id": "content_builder",
+      "langgraph_checkpoint_ns": "model:3f8e2fcf-a898-5d56-59e0-bdabd7a15bce",
+      "langgraph_node": "model",
+      "langgraph_path": [
+        "__pregel_pull",
+        "model"
+      ],
+      "langgraph_step": 22,
+      "langgraph_triggers": [
+        "branch:to:model"
+      ],
+      "lc_agent_name": null,
+      "lc_versions": {
+        "deepagents": "0.7.8",
+        "langchain": "1.4.3",
+        "langchain-core": "1.6.7",
+        "langchain-openai": "1.6.7"
+      },
+      "ls_integration": "langchain_chat_model",
+      "ls_method": "traceable",
+      "ls_model_name": "qwen3.8-flash",
+      "ls_model_type": "chat",
+      "ls_provider": "openai",
+      "ls_temperature": null,
+      "model": "qwen3.8-flash",
+      "model_name": "qwen3.8-flash",
+      "parallel_tool_calls": false,
+      "stop": null,
+      "stream": false,
+      "thread_id": "cdd1ac3f-ef0b-4f6b-aded-dbe25bbb6544"
+    },
+    "token_usage": {
+      "completion_tokens": 440,
+      "prompt_tokens": 7741,
+      "total_tokens": 8181
+    },
+    "error": null
+  },
+  {
+    "run_id": "01a192b3-668c-7571-83c1-7a267b12a218",
+    "name": "ChatOpenAI",
+    "start_time": "2026-10-31T16:03:13.164623Z",
+    "end_time": "2026-10-31T16:03:14.75269Z",
+    "duration_ms": 1588,
+    "custom_metadata": {
+      "LANGCHAIN_OPENAI_STREAM_CHUNK_TIMEOUT_S": "300",
+      "LANGSMITH_ENDPOINT": "https://api.smith.langchain.com",
+      "LANGSMITH_PROJECT": "deepagents-course",
+      "LANGSMITH_TRACING": "true",
+      "_type": "openai-chat",
+      "assistant_id": "content_builder",
+      "checkpoint_ns": "98b7fb49-fda7-4038-9812-d43067d917c3",
+      "graph_id": "content_builder",
+      "langgraph_checkpoint_ns": "model:fde97c4e-40a5-c793-759c-7cd890c882f4",
+      "langgraph_node": "model",
+      "langgraph_path": [
+        "__pregel_pull",
+        "model"
+      ],
+      "langgraph_step": 25,
+      "langgraph_triggers": [
+        "branch:to:model"
+      ],
+      "lc_agent_name": null,
+      "lc_versions": {
+        "deepagents": "0.7.8",
+        "langchain": "1.4.3",
+        "langchain-core": "1.6.7",
+        "langchain-openai": "1.6.7"
+      },
+      "ls_integration": "langchain_chat_model",
+      "ls_method": "traceable",
+      "ls_model_name": "qwen3.8-flash",
+      "ls_model_type": "chat",
+      "ls_provider": "openai",
+      "ls_temperature": null,
+      "model": "qwen3.8-flash",
+      "model_name": "qwen3.8-flash",
+      "parallel_tool_calls": false,
+      "stop": null,
+      "stream": false,
+      "thread_id": "cdd1ac3f-ef0b-4f6b-aded-dbe25bbb6544",
+      "usage_metadata": {
+        "input_token_details": {
+          "cache_read": 7168
+        },
+        "input_tokens": 8169,
+        "output_token_details": {
+          "reasoning": 20
+        },
+        "output_tokens": 51,
+        "total_tokens": 8220
+      }
+    },
+    "token_usage": {
+      "completion_tokens": 51,
+      "prompt_tokens": 8169,
+      "total_tokens": 8220
+    },
+    "error": null
+  },
+  {
+    "run_id": "01a192b3-6cd8-7a11-b074-e6e2502e3769",
+    "name": "ChatOpenAI",
+    "start_time": "2026-10-31T16:03:14.77657Z",
+    "end_time": "2026-10-31T16:03:18.378325Z",
+    "duration_ms": 3601,
+    "custom_metadata": {
+      "LANGCHAIN_OPENAI_STREAM_CHUNK_TIMEOUT_S": "300",
+      "LANGSMITH_ENDPOINT": "https://api.smith.langchain.com",
+      "LANGSMITH_PROJECT": "deepagents-course",
+      "LANGSMITH_TRACING": "true",
+      "_type": "openai-chat",
+      "assistant_id": "content_builder",
+      "checkpoint_ns": "98b7fb49-fda7-4038-9812-d43067d917c3",
+      "graph_id": "content_builder",
+      "langgraph_checkpoint_ns": "model:a6f00e59-c072-dc1f-1d18-ccf4c23fc220",
+      "langgraph_node": "model",
+      "langgraph_path": [
+        "__pregel_pull",
+        "model"
+      ],
+      "langgraph_step": 28,
+      "langgraph_triggers": [
+        "branch:to:model"
+      ],
+      "lc_agent_name": null,
+      "lc_versions": {
+        "deepagents": "0.7.8",
+        "langchain": "1.4.3",
+        "langchain-core": "1.6.7",
+        "langchain-openai": "1.6.7"
+      },
+      "ls_integration": "langchain_chat_model",
+      "ls_method": "traceable",
+      "ls_model_name": "qwen3.8-flash",
+      "ls_model_type": "chat",
+      "ls_provider": "openai",
+      "ls_temperature": null,
+      "model": "qwen3.8-flash",
+      "model_name": "qwen3.8-flash",
+      "parallel_tool_calls": false,
+      "stop": null,
+      "stream": false,
+      "thread_id": "cdd1ac3f-ef0b-4f6b-aded-dbe25bbb6544",
+      "usage_metadata": {
+        "input_token_details": {
+          "cache_read": 7168
+        },
+        "input_tokens": 8569,
+        "output_token_details": {
+          "reasoning": 107
+        },
+        "output_tokens": 242,
+        "total_tokens": 8811
+      }
+    },
+    "token_usage": {
+      "completion_tokens": 242,
+      "prompt_tokens": 8569,
+      "total_tokens": 8811
+    },
+    "error": null
+  },
+  {
+    "run_id": "01a192b3-7b00-71f1-95f0-62f3068f047f",
+    "name": "ChatOpenAI",
+    "start_time": "2026-10-31T16:03:18.400278Z",
+    "end_time": "2026-10-31T16:03:23.125076Z",
+    "duration_ms": 4724,
+    "custom_metadata": {
+      "LANGCHAIN_OPENAI_STREAM_CHUNK_TIMEOUT_S": "300",
+      "LANGSMITH_ENDPOINT": "https://api.smith.langchain.com",
+      "LANGSMITH_PROJECT": "deepagents-course",
+      "LANGSMITH_TRACING": "true",
+      "_type": "openai-chat",
+      "assistant_id": "content_builder",
+      "checkpoint_ns": "98b7fb49-fda7-4038-9812-d43067d917c3",
+      "graph_id": "content_builder",
+      "langgraph_checkpoint_ns": "model:f5a71af5-2d88-b4ef-1dcf-06c1fa94888f",
+      "langgraph_node": "model",
+      "langgraph_path": [
+        "__pregel_pull",
+        "model"
+      ],
+      "langgraph_step": 31,
+      "langgraph_triggers": [
+        "branch:to:model"
+      ],
+      "lc_agent_name": null,
+      "lc_versions": {
+        "deepagents": "0.7.8",
+        "langchain": "1.4.3",
+        "langchain-core": "1.6.7",
+        "langchain-openai": "1.6.7"
+      },
+      "ls_integration": "langchain_chat_model",
+      "ls_method": "traceable",
+      "ls_model_name": "qwen3.8-flash",
+      "ls_model_type": "chat",
+      "ls_provider": "openai",
+      "ls_temperature": null,
+      "model": "qwen3.8-flash",
+      "model_name": "qwen3.8-flash",
+      "parallel_tool_calls": false,
+      "stop": null,
+      "stream": false,
+      "thread_id": "cdd1ac3f-ef0b-4f6b-aded-dbe25bbb6544",
+      "usage_metadata": {
+        "input_token_details": {
+          "cache_read": 8192
+        },
+        "input_tokens": 8828,
+        "output_token_details": {
+          "reasoning": 109
+        },
+        "output_tokens": 371,
+        "total_tokens": 9199
+      }
+    },
+    "token_usage": {
+      "completion_tokens": 371,
+      "prompt_tokens": 8828,
+      "total_tokens": 9199
+    },
+    "error": null
+  }
+]

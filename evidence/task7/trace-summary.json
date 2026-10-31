@@ -1,0 +1,155 @@
+{
+  "provenance": "Derived from the archived root/tool exports and LLM query metadata.",
+  "runs": [
+    {
+      "label": "missing-baseline",
+      "trace_id": "01a19277-b2b9-7901-9098-ea1b8a65ccf2",
+      "thread_id": "1cc4bd28-e2a1-41d8-aea0-1ff49b29ccb7",
+      "start_time": "2026-10-31T14:58:00.509354Z",
+      "duration_ms": 35375,
+      "root_error": null,
+      "llm_count": 8,
+      "tool_count": 7,
+      "models": [
+        "qwen3.8-flash"
+      ],
+      "first_model_has_skill_first_system_prompt": false,
+      "tool_names": [
+        "read_file",
+        "read_source",
+        "ls",
+        "glob",
+        "glob",
+        "read_source",
+        "grep"
+      ]
+    },
+    {
+      "label": "missing-skill-only",
+      "trace_id": "01a19284-ee9a-7773-ab94-d736112698cc",
+      "thread_id": "9f1442d3-7809-410b-903d-1061c8b3398e",
+      "start_time": "2026-10-31T15:12:27.810604Z",
+      "duration_ms": 18126,
+      "root_error": null,
+      "llm_count": 5,
+      "tool_count": 4,
+      "models": [
+        "qwen3.8-flash"
+      ],
+      "first_model_has_skill_first_system_prompt": false,
+      "tool_names": [
+        "read_source",
+        "ls",
+        "glob",
+        "read_file"
+      ]
+    },
+    {
+      "label": "missing-intermediate",
+      "trace_id": "01a1928e-d585-7c31-936f-5fd489ee3b7c",
+      "thread_id": "206bbc6e-0876-4cf1-b3cd-957bc8637630",
+      "start_time": "2026-10-31T15:23:16.748072Z",
+      "duration_ms": 35100,
+      "root_error": null,
+      "llm_count": 8,
+      "tool_count": 7,
+      "models": [
+        "qwen3.8-flash"
+      ],
+      "first_model_has_skill_first_system_prompt": false,
+      "tool_names": [
+        "read_file",
+        "read_file",
+        "write_todos",
+        "read_source",
+        "glob",
+        "read_file",
+        "write_todos"
+      ]
+    },
+    {
+      "label": "normal-readback-failure",
+      "trace_id": "01a19293-4ff6-7ff0-8762-a59ef4f8ea8d",
+      "thread_id": "206bbc6e-0876-4cf1-b3cd-957bc8637630",
+      "start_time": "2026-10-31T15:28:10.231858Z",
+      "duration_ms": 9391,
+      "root_error": "\"FileNotFoundError(2, 'No such file or directory')Traceback (most recent call last):\\n\\n\\n  File \\\"/home/lx/projects/content_builder_deepagent/.venv/lib/python3.12/site-packages/langgraph/pregel/main.py\\\", line 3505, in astream\\n    async for _ in runner.atick(\\n\\n\\n  File \\\"/home/lx/projects/content_builder_deepagent/.venv/lib/python3.12/site-packages/langgraph/pregel/_runner.py\\\", line 397, in atick\\n    await arun_with_retry(\\n\\n\\n  File \\\"/home/lx/projects/content_builder_deepagent/.venv/lib/python3.12/site-packages/langgraph/pregel/_retry.py\\\", line 741, in arun_with_retry\\n    async for _ in task.proc.astream(task.input, config):\\n\\n\\n  File \\\"/home/lx/projects/content_builder_deepagent/.venv/lib/python3.12/site-packages/langgraph/_internal/_runnable.py\\\", line 890, in astream\\n    output = await asyncio.create_task(\\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^\\n\\n\\n  File \\\"/home/lx/projects/content_builder_deepagent/.venv/lib/python3.12/site-packages/langgraph/_internal/_runnable.py\\\", line 959, in _consume_aiter\\n    async for chunk in it:\\n\\n\\n  File \\\"/home/lx/projects/content_builder_deepagent/.venv/lib/python3.12/site-packages/langchain_core/tracers/event_stream.py\\\", line 197, in tap_output_aiter\\n    first = await anext(output, sentinel)\\n            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\\n\\n\\n  File \\\"/home/lx/projects/content_builder_deepagent/.venv/lib/python3.12/site-packages/langchain_core/runnables/base.py\\\", line 1831, in atransform\\n    async for ichunk in input:\\n\\n\\n  File \\\"/home/lx/projects/content_builder_deepagent/.venv/lib/python3.12/site-packages/langchain_core/runnables/base.py\\\", line 1831, in atransform\\n    async for ichunk in input:\\n\\n\\n  File \\\"/home/lx/projects/content_builder_deepagent/.venv/lib/python3.12/site-packages/langchain_core/runnables/base.py\\\", line 1235, in astream\\n    yield await self.ainvoke(input, config, **kwargs)\\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\\n\\n\\n  File \\\"/home/lx/projects/content_builder_deepagent/.venv/lib/python3.12/site-packages/langgraph/_internal/_runnable.py\\\", line 522, in ainvoke\\n    ret = await self.afunc(*args, **kwargs)\\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\\n\\n\\n  File \\\"/home/lx/projects/content_builder_deepagent/.venv/lib/python3.12/site-packages/langgraph/prebuilt/tool_node.py\\\", line 858, in _afunc\\n    outputs = await asyncio.gather(*coros)\\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\\n\\n\\n  File \\\"/home/lx/projects/content_builder_deepagent/.venv/lib/python3.12/site-packages/langgraph/prebuilt/tool_node.py\\\", line 1216, in _arun_one\\n    content = _handle_tool_error(e, flag=self._handle_tool_errors)\\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\\n\\n\\n  File \\\"/home/lx/projects/content_builder_deepagent/.venv/lib/python3.12/site-packages/langgraph/prebuilt/tool_node.py\\\", line 434, in _handle_tool_error\\n    content = flag(e)  # type: ignore [assignment, call-arg]\\n              ^^^^^^^\\n\\n\\n  File \\\"/home/lx/projects/content_builder_deepagent/.venv/lib/python3.12/site-packages/langgraph/prebuilt/tool_node.py\\\", line 391, in _default_handle_tool_errors\\n    raise e\\n\\n\\n  File \\\"/home/lx/projects/content_builder_deepagent/.venv/lib/python3.12/site-packages/langgraph/prebuilt/tool_node.py\\\", line 1207, in _arun_one\\n    return await self._awrap_tool_call(tool_request, execute)\\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\\n\\n\\n  File \\\"/home/lx/projects/content_builder_deepagent/.venv/lib/python3.12/site-packages/deepagents/middleware/filesystem.py\\\", line 3515, in awrap_tool_call\\n    tool_result = await handler(request)\\n                  ^^^^^^^^^^^^^^^^^^^^^^\\n\\n\\n  File \\\"/home/lx/projects/content_builder_deepagent/.venv/lib/python3.12/site-packages/langgraph/prebuilt/tool_node.py\\\", line 1198, in execute\\n    return await self._execute_tool_async(req, input_type, config)\\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\\n\\n\\n  File \\\"/home/lx/projects/content_builder_deepagent/.venv/lib/python3.12/site-packages/langgraph/prebuilt/tool_node.py\\\", line 1153, in _execute_tool_async\\n    content = _handle_tool_error(e, flag=self._handle_tool_errors)\\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\\n\\n\\n  File \\\"/home/lx/projects/content_builder_deepagent/.venv/lib/python3.12/site-packages/langgraph/prebuilt/tool_node.py\\\", line 434, in _handle_tool_error\\n    content = flag(e)  # type: ignore [assignment, call-arg]\\n              ^^^^^^^\\n\\n\\n  File \\\"/home/lx/projects/content_builder_deepagent/.venv/lib/python3.12/site-packages/langgraph/prebuilt/tool_node.py\\\", line 391, in _default_handle_tool_errors\\n    raise e\\n\\n\\n  File \\\"/home/lx/projects/content_builder_deepagent/.venv/lib/python3.12/site-packages/langgraph/prebuilt/tool_node.py\\\", line 1105, in _execute_tool_async\\n    response = await tool.ainvoke(call_args, config)\\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\\n\\n\\n  File \\\"/home/lx/projects/content_builder_deepagent/.venv/lib/python3.12/site-packages/langchain_core/tools/structured.py\\\", line 123, in ainvoke\\n    return await run_in_executor(config, self.invoke, input, config, **kwargs)\\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\\n\\n\\n  File \\\"/home/lx/projects/content_builder_deepagent/.venv/lib/python3.12/site-packages/langchain_core/runnables/config.py\\\", line 707, in run_in_executor\\n    return await asyncio.get_running_loop().run_in_executor(\\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\\n\\n\\n  File \\\"/usr/lib/python3.12/concurrent/futures/thread.py\\\", line 58, in run\\n    result = self.fn(*self.args, **self.kwargs)\\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\\n\\n\\n  File \\\"/home/lx/projects/content_builder_deepagent/.venv/lib/python3.12/site-packages/langchain_core/runnables/config.py\\\", line 698, in wrapper\\n    return func(*args, **kwargs)\\n           ^^^^^^^^^^^^^^^^^^^^^\\n\\n\\n  File \\\"/home/lx/projects/content_builder_deepagent/.venv/lib/python3.12/site-packages/langchain_core/tools/base.py\\\", line 764, in invoke\\n    return self.run(tool_input, **kwargs)\\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\\n\\n\\n  File \\\"/home/lx/projects/content_builder_deepagent/.venv/lib/python3.12/site-packages/langchain_core/tools/base.py\\\", line 1132, in run\\n    raise error_to_raise\\n\\n\\n  File \\\"/home/lx/projects/content_builder_deepagent/.venv/lib/python3.12/site-packages/langchain_core/tools/base.py\\\", line 1098, in run\\n    response = context.run(self._run, *tool_args, **tool_kwargs)\\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\\n\\n\\n  File \\\"/home/lx/projects/content_builder_deepagent/.venv/lib/python3.12/site-packages/langchain_core/tools/structured.py\\\", line 152, in _run\\n    return self.func(*args, **kwargs)\\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^\\n\\n\\n  File \\\"/home/lx/projects/content_builder_deepagent/src/content_builder_deepagent/lesson_tools.py\\\", line 56, in read_report\\n    return _path(\\\"blogs\\\", _slug(slug), \\\"post.md\\\").read_text(encoding=\\\"utf-8\\\")\\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\\n\\n\\n  File \\\"/usr/lib/python3.12/pathlib.py\\\", line 1029, in read_text\\n    with self.open(mode='r', encoding=encoding, errors=errors) as f:\\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\\n\\n\\n  File \\\"/usr/lib/python3.12/pathlib.py\\\", line 1015, in open\\n    return io.open(self, mode, buffering, encoding, errors, newline)\\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\\n\\n\\nFileNotFoundError: [Errno 2] No such file or directory: '/home/lx/projects/content_builder_deepagent/blogs/task7-normal-report/post.md'\\n\\n\\nDuring task with name 'tools' and id 'c22d5be3-689f-c617-05a8-35e3dd7bd383'\"",
+      "llm_count": 3,
+      "tool_count": 3,
+      "models": [
+        "qwen3.8-flash"
+      ],
+      "first_model_has_skill_first_system_prompt": false,
+      "tool_names": [
+        "write_todos",
+        "read_source",
+        "read_report"
+      ]
+    },
+    {
+      "label": "normal-argument-failure",
+      "trace_id": "01a192a2-e551-7613-ad76-8485a9641495",
+      "thread_id": "86b65f79-202c-455f-b8a1-d5b67dd114df",
+      "start_time": "2026-10-31T15:45:11.508923Z",
+      "duration_ms": 6976,
+      "root_error": "ValueError('Use a Markdown filename from sources/')Traceback (most recent call last):\n\n\n  File \"/home/lx/projects/content_builder_deepagent/.venv/lib/python3.12/site-packages/langgraph/pregel/main.py\", line 3505, in astream\n    async for _ in runner.atick(\n\n\n  File \"/home/lx/projects/content_builder_deepagent/.venv/lib/python3.12/site-packages/langgraph/pregel/_runner.py\", line 397, in atick\n    await arun_with_retry(\n\n\n  File \"/home/lx/projects/content_builder_deepagent/.venv/lib/python3.12/site-packages/langgraph/pregel/_retry.py\", line 741, in arun_with_retry\n    async for _ in task.proc.astream(task.input, config):\n\n\n  File \"/home/lx/projects/content_builder_deepagent/.venv/lib/python3.12/site-packages/langgraph/_internal/_runnable.py\", line 890, in astream\n    output = await asyncio.create_task(\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^\n\n\n  File \"/home/lx/projects/content_builder_deepagent/.venv/lib/python3.12/site-packages/langgraph/_internal/_runnable.py\", line 959, in _consume_aiter\n    async for chunk in it:\n\n\n  File \"/home/lx/projects/content_builder_deepagent/.venv/lib/python3.12/site-packages/langchain_core/tracers/event_stream.py\", line 197, in tap_output_aiter\n    first = await anext(output, sentinel)\n            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\n\n  File \"/home/lx/projects/content_builder_deepagent/.venv/lib/python3.12/site-packages/langchain_core/runnables/base.py\", line 1831, in atransform\n    async for ichunk in input:\n\n\n  File \"/home/lx/projects/content_builder_deepagent/.venv/lib/python3.12/site-packages/langchain_core/runnables/base.py\", line 1831, in atransform\n    async for ichunk in input:\n\n\n  File \"/home/lx/projects/content_builder_deepagent/.venv/lib/python3.12/site-packages/langchain_core/runnables/base.py\", line 1235, in astream\n    yield await self.ainvoke(input, config, **kwargs)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\n\n  File \"/home/lx/projects/content_builder_deepagent/.venv/lib/python3.12/site-packages/langgraph/_internal/_runnable.py\", line 522, in ainvoke\n    ret = await self.afunc(*args, **kwargs)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\n\n  File \"/home/lx/projects/content_builder_deepagent/.venv/lib/python3.12/site-packages/langgraph/prebuilt/tool_node.py\", line 858, in _afunc\n    outputs = await asyncio.gather(*coros)\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\n\n  File \"/home/lx/projects/content_builder_deepagent/.venv/lib/python3.12/site-packages/langgraph/prebuilt/tool_node.py\", line 1216, in _arun_one\n    content = _handle_tool_error(e, flag=self._handle_tool_errors)\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\n\n  File \"/home/lx/projects/content_builder_deepagent/.venv/lib/python3.12/site-packages/langgraph/prebuilt/tool_node.py\", line 434, in _handle_tool_error\n    content = flag(e)  # type: ignore [assignment, call-arg]\n              ^^^^^^^\n\n\n  File \"/home/lx/projects/content_builder_deepagent/.venv/lib/python3.12/site-packages/langgraph/prebuilt/tool_node.py\", line 391, in _default_handle_tool_errors\n    raise e\n\n\n  File \"/home/lx/projects/content_builder_deepagent/.venv/lib/python3.12/site-packages/langgraph/prebuilt/tool_node.py\", line 1207, in _arun_one\n    return await self._awrap_tool_call(tool_request, execute)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\n\n  File \"/home/lx/projects/content_builder_deepagent/.venv/lib/python3.12/site-packages/deepagents/middleware/filesystem.py\", line 3515, in awrap_tool_call\n    tool_result = await handler(request)\n                  ^^^^^^^^^^^^^^^^^^^^^^\n\n\n  File \"/home/lx/projects/content_builder_deepagent/.venv/lib/python3.12/site-packages/langgraph/prebuilt/tool_node.py\", line 1198, in execute\n    return await self._execute_tool_async(req, input_type, config)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\n\n  File \"/home/lx/projects/content_builder_deepagent/.venv/lib/python3.12/site-packages/langgraph/prebuilt/tool_node.py\", line 1153, in _execute_tool_async\n    content = _handle_tool_error(e, flag=self._handle_tool_errors)\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\n\n  File \"/home/lx/projects/content_builder_deepagent/.venv/lib/python3.12/site-packages/langgraph/prebuilt/tool_node.py\", line 434, in _handle_tool_error\n    content = flag(e)  # type: ignore [assignment, call-arg]\n              ^^^^^^^\n\n\n  File \"/home/lx/projects/content_builder_deepagent/.venv/lib/python3.12/site-packages/langgraph/prebuilt/tool_node.py\", line 391, in _default_handle_tool_errors\n    raise e\n\n\n  File \"/home/lx/projects/content_builder_deepagent/.venv/lib/python3.12/site-packages/langgraph/prebuilt/tool_node.py\", line 1105, in _execute_tool_async\n    response = await tool.ainvoke(call_args, config)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\n\n  File \"/home/lx/projects/content_builder_deepagent/.venv/lib/python3.12/site-packages/langchain_core/tools/structured.py\", line 123, in ainvoke\n    return await run_in_executor(config, self.invoke, input, config, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\n\n  File \"/home/lx/projects/content_builder_deepagent/.venv/lib/python3.12/site-packages/langchain_core/runnables/config.py\", line 707, in run_in_executor\n    return await asyncio.get_running_loop().run_in_executor(\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\n\n  File \"/usr/lib/python3.12/concurrent/futures/thread.py\", line 58, in run\n    result = self.fn(*self.args, **self.kwargs)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\n\n  File \"/home/lx/projects/content_builder_deepagent/.venv/lib/python3.12/site-packages/langchain_core/runnables/config.py\", line 698, in wrapper\n    return func(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\n\n\n  File \"/home/lx/projects/content_builder_deepagent/.venv/lib/python3.12/site-packages/langchain_core/tools/base.py\", line 764, in invoke\n    return self.run(tool_input, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\n\n  File \"/home/lx/projects/content_builder_deepagent/.venv/lib/python3.12/site-packages/langchain_core/tools/base.py\", line 1132, in run\n    raise error_to_raise\n\n\n  File \"/home/lx/projects/content_builder_deepagent/.venv/lib/python3.12/site-packages/langchain_core/tools/base.py\", line 1098, in run\n    response = context.run(self._run, *tool_args, **tool_kwargs)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\n\n  File \"/home/lx/projects/content_builder_deepagent/.venv/lib/python3.12/site-packages/langchain_core/tools/structured.py\", line 152, in _run\n    return self.func(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^\n\n\n  File \"/home/lx/projects/content_builder_deepagent/src/content_builder_deepagent/lesson_tools.py\", line 31, in read_source\n    raise ValueError(\"Use a Markdown filename from sources/\")\n\n\nValueError: Use a Markdown filename from sources/\n\n\nDuring task with name 'tools' and id '48d55e31-3ae8-bca9-8294-5d6b87c9eed4'",
+      "llm_count": 3,
+      "tool_count": 3,
+      "models": [
+        "qwen3.8-flash"
+      ],
+      "first_model_has_skill_first_system_prompt": true,
+      "tool_names": [
+        "read_file",
+        "write_todos",
+        "read_source"
+      ]
+    },
+    {
+      "label": "normal-final",
+      "trace_id": "01a192b3-0b22-71e0-a207-80727414a337",
+      "thread_id": "cdd1ac3f-ef0b-4f6b-aded-dbe25bbb6544",
+      "start_time": "2026-10-31T16:02:49.766094Z",
+      "duration_ms": 33422,
+      "root_error": null,
+      "llm_count": 10,
+      "tool_count": 9,
+      "models": [
+        "qwen3.8-flash"
+      ],
+      "first_model_has_skill_first_system_prompt": true,
+      "tool_names": [
+        "read_file",
+        "write_todos",
+        "read_source",
+        "read_file",
+        "glob",
+        "write_todos",
+        "save_report",
+        "read_report",
+        "write_todos"
+      ]
+    },
+    {
+      "label": "missing-final",
+      "trace_id": "01a192b6-552f-7443-9f46-c4939ddbe8ee",
+      "thread_id": "fbdbf5ec-5b2e-41c2-a00d-b188665958dd",
+      "start_time": "2026-10-31T16:06:25.328391Z",
+      "duration_ms": 27908,
+      "root_error": null,
+      "llm_count": 6,
+      "tool_count": 5,
+      "models": [
+        "qwen3.8-flash"
+      ],
+      "first_model_has_skill_first_system_prompt": true,
+      "tool_names": [
+        "read_file",
+        "write_todos",
+        "read_source",
+        "glob",
+        "write_todos"
+      ]
+    }
+  ]
+}
